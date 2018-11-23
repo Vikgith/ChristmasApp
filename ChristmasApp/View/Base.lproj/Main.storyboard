@@ -24,10 +24,21 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="jEA-97-o8l" userLabel="Background">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                     </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a6d-Fw-Nqg">
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1oA-yS-aju" userLabel="Back Card View">
+                                        <rect key="frame" x="17" y="58" width="340" height="551"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="HCA-Qk-SdN" userLabel="Back Card">
+                                                <rect key="frame" x="0.0" y="0.0" width="340" height="550"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a6d-Fw-Nqg" userLabel="Front View">
                                         <rect key="frame" x="17.5" y="58.5" width="340" height="550"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="front" translatesAutoresizingMaskIntoConstraints="NO" id="A5d-ZP-5Xg" userLabel="Front Card">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="front" translatesAutoresizingMaskIntoConstraints="NO" id="A5d-ZP-5Xg" userLabel="Front background">
                                                 <rect key="frame" x="0.0" y="0.0" width="340" height="550"/>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nFX-rA-Hkf" userLabel="Scratch Card View">
@@ -78,15 +89,6 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nB-Fn-2Ph">
-                                                <rect key="frame" x="142.5" y="238.5" width="54" height="72"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                                <state key="normal" title="❄️"/>
-                                                <connections>
-                                                    <action selector="snowButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XLs-ha-uNl"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="nFX-rA-Hkf" firstAttribute="leading" secondItem="UaG-qs-UFb" secondAttribute="leading" id="4q4-6c-Pdp"/>
@@ -124,10 +126,15 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="HCA-Qk-SdN" userLabel="Back Card">
-                                        <rect key="frame" x="17" y="58" width="340" height="550"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nB-Fn-2Ph">
+                                        <rect key="frame" x="160" y="0.0" width="54" height="72"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <state key="normal" title="❄️"/>
+                                        <connections>
+                                            <action selector="snowButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XLs-ha-uNl"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="jEA-97-o8l" secondAttribute="trailing" id="9Z2-w8-BeX"/>
@@ -149,6 +156,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="backCardView" destination="1oA-yS-aju" id="8ZA-ax-f11"/>
                         <outlet property="backImageView" destination="HCA-Qk-SdN" id="N12-uh-3CE"/>
                         <outlet property="cardView" destination="a6d-Fw-Nqg" id="jwK-U6-THT"/>
                         <outlet property="frontImageView" destination="A5d-ZP-5Xg" id="9Ib-rU-nYl"/>
