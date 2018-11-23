@@ -17,23 +17,20 @@ class ViewController: UIViewController,SRScratchViewDelegate{
     private var isFlipped: Bool = false
     
     
-    @IBOutlet weak var backImageView: UIImageView!
+    @IBOutlet weak var backImageView: UIImageView! //BackView (ImageView)
     @IBOutlet weak var frontImageView: UIImageView!
     @IBOutlet weak var scratchCardView: UIView!
     @IBOutlet weak var scratchImageView: SRScratchView!
     
-    @IBOutlet weak var cardView: UIView!
-    @IBOutlet weak var backCardView: UIView!
-    
-    
+    @IBOutlet weak var cardView: UIView! //FrontView (View:scratch,images,..)
+    @IBOutlet weak var backCardView: UIView! //CardView (View: front&back
     
     @IBAction func snowButton(_ sender: UIButton) {
-        //createParticles(color: UIColor.white, color2: UIColor.white, color3: UIColor.white)
         
         isFlipped = !isFlipped
         
-        let cardToFlip = isFlipped ? cardView : backCardView
-        let bottomCard = isFlipped ? backCardView : cardView
+        let cardToFlip = isFlipped ? backImageView : cardView //cardView : backImageView
+        let bottomCard = isFlipped ? cardView : backImageView //backImageView : cardView
         
         UIView.transition(from: cardToFlip!,
                           to: bottomCard!,
@@ -56,6 +53,12 @@ class ViewController: UIViewController,SRScratchViewDelegate{
         self.scratchCardView.layer.cornerRadius = self.scratchImageView.frame.height/2
         self.scratchCardView.layer.masksToBounds = true
         
+        self.backImageView.cornerRadius = 50
+        self.backImageView.layer.masksToBounds = true
+        self.cardView.cornerRadius = 50
+        self.cardView.layer.masksToBounds = true
+        
+        
     }
     
     
@@ -65,7 +68,8 @@ class ViewController: UIViewController,SRScratchViewDelegate{
         if eraseProgress > 50.0{
             UIView.animate(withDuration: 0.5, animations: {
                 self.scratchImageView.alpha = 0.0
-                self.cardView.boing()
+                self.backCardView.boing()
+                self.createParticles(color: UIColor.white, color2: UIColor.white, color3: UIColor.white)
             })
         }
     }
