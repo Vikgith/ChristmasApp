@@ -167,3 +167,68 @@ extension UIView {
         }
     }
 }
+
+//extension UIViewController {
+//    func createParticles() {
+//        let particleEmitter = CAEmitterLayer()
+//
+//        particleEmitter.emitterPosition = CGPoint(x: view.frame.width / 2.0, y: -50)
+//        particleEmitter.emitterShape = .line
+//        particleEmitter.emitterSize = CGSize(width: view.frame.width, height: 1)
+//        particleEmitter.renderMode = .additive
+//
+//        let cell = CAEmitterCell()
+//        cell.birthRate = 10
+//        cell.lifetime = 5.0
+//        cell.velocity = 100
+//        cell.velocityRange = 50
+//        cell.emissionLongitude = .pi
+//        cell.spinRange = 5
+//        cell.scale = 0.5
+//        cell.scaleRange = 0.25
+//        cell.color = UIColor(white: 1, alpha: 0.1).cgColor
+//        cell.alphaSpeed = -0.025
+//        cell.contents = UIImage(named: "Snow")?.cgImage
+//        particleEmitter.emitterCells = [cell]
+//
+//        //gradientView.layer.addSublayer(particleEmitter)
+//    }
+//}
+
+extension UIViewController {
+    
+    func createParticles(color: UIColor, color2: UIColor, color3: UIColor) {
+        let particleEmitter = CAEmitterLayer()
+        
+        particleEmitter.emitterPosition = CGPoint(x: view.center.x, y: -96)
+        particleEmitter.emitterShape = .line
+        particleEmitter.emitterSize = CGSize(width: view.frame.size.width, height: 1)
+        
+        let cgcolor1 = makeEmitterCell(color: color)
+        let cgcolor2 = makeEmitterCell(color: color2)
+        let cgcolor3 = makeEmitterCell(color: color3)
+        
+        particleEmitter.emitterCells = [cgcolor1, cgcolor2, cgcolor3]
+        
+        view.layer.addSublayer(particleEmitter)
+    }
+    
+    func makeEmitterCell(color: UIColor) -> CAEmitterCell {
+        let cell = CAEmitterCell()
+        cell.birthRate = 3
+        cell.lifetime = 7.0
+        cell.lifetimeRange = 0
+        cell.color = color.cgColor
+        cell.velocity = 200
+        cell.velocityRange = 50
+        cell.emissionLongitude = CGFloat.pi
+        cell.emissionRange = CGFloat.pi / 4
+        cell.spin = 2
+        cell.spinRange = 3
+        cell.scaleRange = 0.5
+        cell.scaleSpeed = -0.05
+        
+        cell.contents = UIImage(named: "Snow")?.cgImage
+        return cell
+    }
+}

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		162A6565081CD9E64D03261D /* Pods_ChristmasApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4D2B1EE03CCF3A1865F0AAE /* Pods_ChristmasApp.framework */; };
 		EF5693DF21A7AC4900374B85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5693DE21A7AC4900374B85 /* AppDelegate.swift */; };
-		EF5693E121A7AC4900374B85 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5693E021A7AC4900374B85 /* ViewController.swift */; };
+		EF5693E121A7AC4900374B85 /* ScratchCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5693E021A7AC4900374B85 /* ScratchCardViewController.swift */; };
 		EF5693E421A7AC4900374B85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF5693E221A7AC4900374B85 /* Main.storyboard */; };
 		EF5693E621A7AC4900374B85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF5693E521A7AC4900374B85 /* Assets.xcassets */; };
 		EF5693E921A7AC4900374B85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF5693E721A7AC4900374B85 /* LaunchScreen.storyboard */; };
@@ -22,7 +22,7 @@
 		CE6BAF938F07FBDD0A143316 /* Pods-ChristmasApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChristmasApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChristmasApp/Pods-ChristmasApp.debug.xcconfig"; sourceTree = "<group>"; };
 		EF5693DB21A7AC4900374B85 /* ChristmasApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChristmasApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF5693DE21A7AC4900374B85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EF5693E021A7AC4900374B85 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EF5693E021A7AC4900374B85 /* ScratchCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchCardViewController.swift; sourceTree = "<group>"; };
 		EF5693E321A7AC4900374B85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF5693E521A7AC4900374B85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF5693E821A7AC4900374B85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -101,8 +101,8 @@
 		EF5693F121A7B61700374B85 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EF5693E021A7AC4900374B85 /* ScratchCardViewController.swift */,
 				EF5693DE21A7AC4900374B85 /* AppDelegate.swift */,
-				EF5693E021A7AC4900374B85 /* ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -243,7 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF5693E121A7AC4900374B85 /* ViewController.swift in Sources */,
+				EF5693E121A7AC4900374B85 /* ScratchCardViewController.swift in Sources */,
 				EF5693F521A7B66A00374B85 /* Extensions.swift in Sources */,
 				EF5693DF21A7AC4900374B85 /* AppDelegate.swift in Sources */,
 			);
@@ -402,7 +402,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.VicALon.ChristmasApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -421,7 +421,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.VicALon.ChristmasApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
