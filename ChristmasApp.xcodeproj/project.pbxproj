@@ -14,6 +14,9 @@
 		EF5693E621A7AC4900374B85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF5693E521A7AC4900374B85 /* Assets.xcassets */; };
 		EF5693E921A7AC4900374B85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF5693E721A7AC4900374B85 /* LaunchScreen.storyboard */; };
 		EF5693F521A7B66A00374B85 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5693F421A7B66A00374B85 /* Extensions.swift */; };
+		EFE4F36821AA7BBF00E56EAC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE4F36721AA7BBF00E56EAC /* MainViewController.swift */; };
+		EFE4F36B21AA8BFF00E56EAC /* CardCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE4F36921AA8BFF00E56EAC /* CardCellController.swift */; };
+		EFE4F36C21AA8BFF00E56EAC /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFE4F36A21AA8BFF00E56EAC /* CardCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		EF5693E821A7AC4900374B85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF5693EA21A7AC4900374B85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF5693F421A7B66A00374B85 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		EFE4F36721AA7BBF00E56EAC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		EFE4F36921AA8BFF00E56EAC /* CardCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCellController.swift; sourceTree = "<group>"; };
+		EFE4F36A21AA8BFF00E56EAC /* CardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,11 +86,11 @@
 		EF5693DD21A7AC4900374B85 /* ChristmasApp */ = {
 			isa = PBXGroup;
 			children = (
+				EF5693EA21A7AC4900374B85 /* Info.plist */,
 				EF5693F221A7B62400374B85 /* Helper */,
 				EF5693F021A7B61100374B85 /* View */,
 				EF5693F121A7B61700374B85 /* Controller */,
 				EF5693F321A7B64700374B85 /* Media */,
-				EF5693EA21A7AC4900374B85 /* Info.plist */,
 			);
 			path = ChristmasApp;
 			sourceTree = "<group>";
@@ -101,8 +107,10 @@
 		EF5693F121A7B61700374B85 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				EF5693E021A7AC4900374B85 /* ScratchCardViewController.swift */,
 				EF5693DE21A7AC4900374B85 /* AppDelegate.swift */,
+				EF5693E021A7AC4900374B85 /* ScratchCardViewController.swift */,
+				EFE4F36721AA7BBF00E56EAC /* MainViewController.swift */,
+				EFE4F36D21AB2F0E00E56EAC /* CARD CELL */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -121,6 +129,15 @@
 				EF5693E521A7AC4900374B85 /* Assets.xcassets */,
 			);
 			path = Media;
+			sourceTree = "<group>";
+		};
+		EFE4F36D21AB2F0E00E56EAC /* CARD CELL */ = {
+			isa = PBXGroup;
+			children = (
+				EFE4F36921AA8BFF00E56EAC /* CardCellController.swift */,
+				EFE4F36A21AA8BFF00E56EAC /* CardCell.xib */,
+			);
+			path = "CARD CELL";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +202,7 @@
 			files = (
 				EF5693E921A7AC4900374B85 /* LaunchScreen.storyboard in Resources */,
 				EF5693E621A7AC4900374B85 /* Assets.xcassets in Resources */,
+				EFE4F36C21AA8BFF00E56EAC /* CardCell.xib in Resources */,
 				EF5693E421A7AC4900374B85 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,12 +220,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ChristmasApp/Pods-ChristmasApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/SRScratchView/SRScratchView.framework",
+				"${BUILT_PRODUCTS_DIR}/VerticalCardSwiper/VerticalCardSwiper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SRScratchView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VerticalCardSwiper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -243,9 +263,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFE4F36821AA7BBF00E56EAC /* MainViewController.swift in Sources */,
 				EF5693E121A7AC4900374B85 /* ScratchCardViewController.swift in Sources */,
 				EF5693F521A7B66A00374B85 /* Extensions.swift in Sources */,
 				EF5693DF21A7AC4900374B85 /* AppDelegate.swift in Sources */,
+				EFE4F36B21AA8BFF00E56EAC /* CardCellController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

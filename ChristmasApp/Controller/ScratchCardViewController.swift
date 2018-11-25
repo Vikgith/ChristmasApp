@@ -9,8 +9,6 @@
 import UIKit
 import SRScratchView
 
-@IBDesignable
-
 class ViewController: UIViewController,SRScratchViewDelegate{
  
     
@@ -20,26 +18,15 @@ class ViewController: UIViewController,SRScratchViewDelegate{
     @IBOutlet weak var scratchCardView: UIView!
     @IBOutlet weak var scratchImageView: SRScratchView!
     
-    
-    
-    @IBOutlet weak var cardView: UIView! //FrontView (View:scratch,images,..)
-    @IBOutlet weak var backCardView: UIView! //CardView (View: front&back
-    
-    @IBOutlet weak var backView: UIView! //BackView
-    
+    @IBOutlet weak var frontView: UIView!
+    @IBOutlet weak var backView: UIView!
+    @IBOutlet weak var cardView: UIView!
     
     @IBAction func snowButton(_ sender: UIButton) {
         
-        isFlipped = !isFlipped
+        UIView.animate(withDuration: 0.6, animations: { self.cardView.transform = CGAffineTransform(scaleX: 3, y: 3) })
         
-        let cardToFlip = isFlipped ? backView : cardView //cardView : backImageView
-        let bottomCard = isFlipped ? cardView : backView //backImageView : cardView
-        
-        UIView.transition(from: cardToFlip!,
-                          to: bottomCard!,
-                          duration: 0.5,
-                          options: [.transitionFlipFromRight, .showHideTransitionViews],
-                          completion: nil)
+        flipCard(view1: backView, view2: frontView)
         
     }
     
@@ -47,7 +34,7 @@ class ViewController: UIViewController,SRScratchViewDelegate{
         super.viewDidLoad()
         
         //width of srcatch line
-        scratchImageView.lineWidth = 30
+        scratchImageView.lineWidth = 20
         //Set delegate to the sratchController
         self.scratchImageView.delegate = self
         //Make scratch surface a circle
@@ -56,8 +43,8 @@ class ViewController: UIViewController,SRScratchViewDelegate{
         self.scratchCardView.layer.cornerRadius = self.scratchImageView.frame.height/2
         self.scratchCardView.layer.masksToBounds = true
     
-        self.cardView.cornerRadius = 10
-        self.cardView.layer.masksToBounds = true
+        self.frontView.cornerRadius = 10
+        self.frontView.layer.masksToBounds = true
         
         
     }
@@ -69,9 +56,29 @@ class ViewController: UIViewController,SRScratchViewDelegate{
         if eraseProgress > 50.0{
             UIView.animate(withDuration: 0.5, animations: {
                 self.scratchImageView.alpha = 0.0
-                self.backCardView.boing()
-                self.createParticles(color: UIColor.white, color2: UIColor.white, color3: UIColor.white)
+                self.cardView.boing()
+                self.createParticles()
             })
+        }
+    }
+    
+    func flipCard (view1:UIView?,view2:UIView?){
+        
+        isFlipped = !isFlipped
+        
+        let cardToFlip = isFlipped ? view1 : view2
+        let bottomCard = isFlipped ? view2 : view1
+        
+        UIView.transition(from: cardToFlip!,
+                          to: bottomCard!,
+                          duration: 0.5,
+                          options: [.transitionFlipFromRight, .showHideTransitionViews],
+                          completion: nil)
+    }
+    
+    func zoomView(){
+        UIView.animate(withDuration: 5) {
+            
         }
     }
     

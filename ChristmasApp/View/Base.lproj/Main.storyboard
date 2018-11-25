@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zMb-9L-84L">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -34,16 +34,16 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="100" height="161"/>
                                                     </imageView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nFX-rA-Hkf" userLabel="Scratch Surface View">
-                                                        <rect key="frame" x="15" y="45.5" width="70" height="70"/>
+                                                        <rect key="frame" x="5" y="35.5" width="90" height="90"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="happyChristmas" translatesAutoresizingMaskIntoConstraints="NO" id="eQa-Lg-JKx" userLabel="WinImage">
-                                                                <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                                             </imageView>
                                                         </subviews>
                                                         <constraints>
                                                             <constraint firstAttribute="bottom" secondItem="eQa-Lg-JKx" secondAttribute="bottom" id="7WG-Ny-r8M"/>
-                                                            <constraint firstAttribute="height" constant="70" id="L90-pJ-1gE"/>
-                                                            <constraint firstAttribute="width" constant="70" id="Vjc-jC-8Ax"/>
+                                                            <constraint firstAttribute="height" constant="90" id="L90-pJ-1gE"/>
+                                                            <constraint firstAttribute="width" constant="90" id="Vjc-jC-8Ax"/>
                                                             <constraint firstAttribute="trailing" secondItem="eQa-Lg-JKx" secondAttribute="trailing" id="dyz-AS-3nu"/>
                                                             <constraint firstItem="eQa-Lg-JKx" firstAttribute="leading" secondItem="nFX-rA-Hkf" secondAttribute="leading" id="hhd-w3-ngw"/>
                                                             <constraint firstItem="eQa-Lg-JKx" firstAttribute="top" secondItem="nFX-rA-Hkf" secondAttribute="top" id="j1a-C2-39P"/>
@@ -58,10 +58,10 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scratchSurface" translatesAutoresizingMaskIntoConstraints="NO" id="UaG-qs-UFb" userLabel="Scratch Image View" customClass="SRScratchView" customModule="SRScratchView">
-                                                        <rect key="frame" x="15" y="45.5" width="70" height="70"/>
+                                                        <rect key="frame" x="5" y="35.5" width="90" height="90"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="70" id="g0P-87-Yg2"/>
-                                                            <constraint firstAttribute="width" constant="70" id="hVP-f0-Ifm"/>
+                                                            <constraint firstAttribute="height" constant="90" id="g0P-87-Yg2"/>
+                                                            <constraint firstAttribute="width" constant="90" id="hVP-f0-Ifm"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
@@ -180,16 +180,46 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="backCardView" destination="1oA-yS-aju" id="8ZA-ax-f11"/>
                         <outlet property="backView" destination="Wod-BV-qP7" id="ccq-OL-Hno"/>
-                        <outlet property="cardView" destination="a6d-Fw-Nqg" id="jwK-U6-THT"/>
+                        <outlet property="cardView" destination="1oA-yS-aju" id="8ZA-ax-f11"/>
+                        <outlet property="frontView" destination="a6d-Fw-Nqg" id="jwK-U6-THT"/>
                         <outlet property="scratchCardView" destination="nFX-rA-Hkf" id="wkC-U7-c4H"/>
                         <outlet property="scratchImageView" destination="UaG-qs-UFb" id="R1X-lY-c8a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130.40000000000001" y="130.88455772113943"/>
+            <point key="canvasLocation" x="-135" y="131"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="Ty8-Bw-H3Y">
+            <objects>
+                <viewController id="zMb-9L-84L" customClass="MainViewController" customModule="ChristmasApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3hR-S0-bh0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="akU-HL-4u4" userLabel="Card Swiper" customClass="VerticalCardSwiper" customModule="VerticalCardSwiper">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="akU-HL-4u4" firstAttribute="top" secondItem="3hR-S0-bh0" secondAttribute="top" id="7yM-Ap-59V"/>
+                            <constraint firstItem="akU-HL-4u4" firstAttribute="leading" secondItem="waK-SK-K72" secondAttribute="leading" id="Fpb-I8-IEN"/>
+                            <constraint firstItem="akU-HL-4u4" firstAttribute="bottom" secondItem="waK-SK-K72" secondAttribute="bottom" id="UIP-sg-azh"/>
+                            <constraint firstItem="akU-HL-4u4" firstAttribute="trailing" secondItem="waK-SK-K72" secondAttribute="trailing" id="ZQy-f6-lWW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="waK-SK-K72"/>
+                    </view>
+                    <connections>
+                        <outlet property="cardSwiper" destination="akU-HL-4u4" id="l4y-nS-lLv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tAP-YQ-GuC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="685.60000000000002" y="130.88455772113943"/>
         </scene>
     </scenes>
     <resources>

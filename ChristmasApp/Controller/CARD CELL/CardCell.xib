@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExampleCardCell" customModule="ChristmasApp" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CardCell" id="Jn7-8p-a1f" customClass="CardCellController" customModule="ChristmasApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="339" height="431"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="339" height="431"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Victor Alonso" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fbr-w0-7Ls">
+                        <rect key="frame" x="0.0" y="0.0" width="339" height="431"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Fbr-w0-7Ls" secondAttribute="trailing" id="VIV-lj-L0J"/>
+                <constraint firstItem="Fbr-w0-7Ls" firstAttribute="leading" secondItem="Jn7-8p-a1f" secondAttribute="leading" id="j1t-SN-q9J"/>
+                <constraint firstItem="Fbr-w0-7Ls" firstAttribute="top" secondItem="Jn7-8p-a1f" secondAttribute="top" id="wX0-5g-yrC"/>
+                <constraint firstAttribute="bottom" secondItem="Fbr-w0-7Ls" secondAttribute="bottom" id="y2T-ZP-TY5"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="1Hc-zX-nnH"/>
+            <size key="customSize" width="381" height="374"/>
+            <point key="canvasLocation" x="181.59999999999999" y="211.39430284857573"/>
+        </collectionViewCell>
+    </objects>
+</document>
