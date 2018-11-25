@@ -17,20 +17,23 @@ class ViewController: UIViewController,SRScratchViewDelegate{
     private var isFlipped: Bool = false
     
     
-    @IBOutlet weak var backImageView: UIImageView! //BackView (ImageView)
-    @IBOutlet weak var frontImageView: UIImageView!
     @IBOutlet weak var scratchCardView: UIView!
     @IBOutlet weak var scratchImageView: SRScratchView!
     
+    
+    
     @IBOutlet weak var cardView: UIView! //FrontView (View:scratch,images,..)
     @IBOutlet weak var backCardView: UIView! //CardView (View: front&back
+    
+    @IBOutlet weak var backView: UIView!
+    
     
     @IBAction func snowButton(_ sender: UIButton) {
         
         isFlipped = !isFlipped
         
-        let cardToFlip = isFlipped ? backImageView : cardView //cardView : backImageView
-        let bottomCard = isFlipped ? cardView : backImageView //backImageView : cardView
+        let cardToFlip = isFlipped ? backView : cardView //cardView : backImageView
+        let bottomCard = isFlipped ? cardView : backView //backImageView : cardView
         
         UIView.transition(from: cardToFlip!,
                           to: bottomCard!,
@@ -52,9 +55,7 @@ class ViewController: UIViewController,SRScratchViewDelegate{
         self.scratchImageView.layer.masksToBounds = true
         self.scratchCardView.layer.cornerRadius = self.scratchImageView.frame.height/2
         self.scratchCardView.layer.masksToBounds = true
-        
-        self.backImageView.cornerRadius = 50
-        self.backImageView.layer.masksToBounds = true
+    
         self.cardView.cornerRadius = 50
         self.cardView.layer.masksToBounds = true
         

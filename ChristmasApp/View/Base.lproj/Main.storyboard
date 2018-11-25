@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,26 +15,17 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ChristmasApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f7j-eT-toq" userLabel="GeneralView">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="jEA-97-o8l" userLabel="Background">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nB-Fn-2Ph">
-                                        <rect key="frame" x="160" y="0.0" width="54" height="72"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                        <state key="normal" title="❄️"/>
-                                        <connections>
-                                            <action selector="snowButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XLs-ha-uNl"/>
-                                        </connections>
-                                    </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1oA-yS-aju" userLabel="Card View">
-                                        <rect key="frame" x="37" y="172.66666666666663" width="340" height="551"/>
+                                        <rect key="frame" x="17.5" y="58" width="340" height="551"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a6d-Fw-Nqg" userLabel="Front View">
                                                 <rect key="frame" x="0.0" y="0.0" width="340" height="551"/>
@@ -43,7 +34,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="340" height="551"/>
                                                     </imageView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nFX-rA-Hkf" userLabel="Scratch Surface View">
-                                                        <rect key="frame" x="10" y="115.33333333333337" width="320" height="320"/>
+                                                        <rect key="frame" x="10" y="115.5" width="320" height="320"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="happyChristmas" translatesAutoresizingMaskIntoConstraints="NO" id="eQa-Lg-JKx" userLabel="WinImage">
                                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
@@ -67,7 +58,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scratchSurface" translatesAutoresizingMaskIntoConstraints="NO" id="UaG-qs-UFb" userLabel="Scratch Image View" customClass="SRScratchView" customModule="SRScratchView">
-                                                        <rect key="frame" x="10" y="115.33333333333337" width="320" height="320"/>
+                                                        <rect key="frame" x="10" y="115.5" width="320" height="320"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="320" id="g0P-87-Yg2"/>
                                                             <constraint firstAttribute="width" constant="320" id="hVP-f0-Ifm"/>
@@ -119,34 +110,40 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="HCA-Qk-SdN" userLabel="Back Card">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wod-BV-qP7" userLabel="Back View">
                                                 <rect key="frame" x="0.0" y="0.0" width="340" height="551"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                        <real key="value" value="20"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                        <real key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                        <size key="value" width="9" height="9"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </imageView>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nB-Fn-2Ph">
+                                                        <rect key="frame" x="-0.5" y="-5" width="340" height="560"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                        <connections>
+                                                            <action selector="snowButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XLs-ha-uNl"/>
+                                                        </connections>
+                                                    </button>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="HCA-Qk-SdN" userLabel="Back background">
+                                                        <rect key="frame" x="-0.5" y="0.0" width="340" height="551"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="50"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                </subviews>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="HCA-Qk-SdN" secondAttribute="trailing" id="0ex-Uy-4gd"/>
-                                            <constraint firstAttribute="bottom" secondItem="HCA-Qk-SdN" secondAttribute="bottom" id="AD4-ZW-1B7"/>
-                                            <constraint firstItem="HCA-Qk-SdN" firstAttribute="top" secondItem="1oA-yS-aju" secondAttribute="top" id="AHo-d7-Edw"/>
+                                            <constraint firstAttribute="trailing" secondItem="Wod-BV-qP7" secondAttribute="trailing" id="2ID-Kk-IOH"/>
                                             <constraint firstItem="a6d-Fw-Nqg" firstAttribute="leading" secondItem="1oA-yS-aju" secondAttribute="leading" id="AWc-Nb-GJZ"/>
-                                            <constraint firstItem="HCA-Qk-SdN" firstAttribute="leading" secondItem="1oA-yS-aju" secondAttribute="leading" id="EcO-bP-aFf"/>
+                                            <constraint firstAttribute="bottom" secondItem="Wod-BV-qP7" secondAttribute="bottom" id="ORV-Jx-gNh"/>
+                                            <constraint firstItem="Wod-BV-qP7" firstAttribute="leading" secondItem="1oA-yS-aju" secondAttribute="leading" id="Rku-GS-5h5"/>
                                             <constraint firstAttribute="trailing" secondItem="a6d-Fw-Nqg" secondAttribute="trailing" id="Twi-Um-38K"/>
                                             <constraint firstItem="a6d-Fw-Nqg" firstAttribute="top" secondItem="1oA-yS-aju" secondAttribute="top" id="YR2-PF-0xj"/>
                                             <constraint firstAttribute="height" constant="551" id="buZ-7Y-Wnr"/>
+                                            <constraint firstItem="Wod-BV-qP7" firstAttribute="top" secondItem="1oA-yS-aju" secondAttribute="top" id="cso-53-txF"/>
                                             <constraint firstAttribute="width" constant="340" id="eBI-TS-qPM"/>
                                             <constraint firstAttribute="bottom" secondItem="a6d-Fw-Nqg" secondAttribute="bottom" id="pAN-rd-KTc"/>
                                         </constraints>
@@ -184,16 +181,15 @@
                     </view>
                     <connections>
                         <outlet property="backCardView" destination="1oA-yS-aju" id="8ZA-ax-f11"/>
-                        <outlet property="backImageView" destination="HCA-Qk-SdN" id="N12-uh-3CE"/>
+                        <outlet property="backView" destination="Wod-BV-qP7" id="ccq-OL-Hno"/>
                         <outlet property="cardView" destination="a6d-Fw-Nqg" id="jwK-U6-THT"/>
-                        <outlet property="frontImageView" destination="A5d-ZP-5Xg" id="9Ib-rU-nYl"/>
                         <outlet property="scratchCardView" destination="nFX-rA-Hkf" id="wkC-U7-c4H"/>
                         <outlet property="scratchImageView" destination="UaG-qs-UFb" id="R1X-lY-c8a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="131.25"/>
+            <point key="canvasLocation" x="130.40000000000001" y="130.88455772113943"/>
         </scene>
     </scenes>
     <resources>
