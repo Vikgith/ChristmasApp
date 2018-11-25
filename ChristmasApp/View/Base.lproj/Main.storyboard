@@ -25,25 +25,25 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1oA-yS-aju" userLabel="Card View">
-                                        <rect key="frame" x="17.5" y="58" width="340" height="551"/>
+                                        <rect key="frame" x="18" y="58" width="100" height="161"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a6d-Fw-Nqg" userLabel="Front View">
-                                                <rect key="frame" x="0.0" y="0.0" width="340" height="551"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="161"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="front" translatesAutoresizingMaskIntoConstraints="NO" id="A5d-ZP-5Xg" userLabel="Front background">
-                                                        <rect key="frame" x="0.0" y="0.0" width="340" height="551"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="161"/>
                                                     </imageView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nFX-rA-Hkf" userLabel="Scratch Surface View">
-                                                        <rect key="frame" x="10" y="115.5" width="320" height="320"/>
+                                                        <rect key="frame" x="15" y="45.5" width="70" height="70"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="happyChristmas" translatesAutoresizingMaskIntoConstraints="NO" id="eQa-Lg-JKx" userLabel="WinImage">
-                                                                <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                                             </imageView>
                                                         </subviews>
                                                         <constraints>
                                                             <constraint firstAttribute="bottom" secondItem="eQa-Lg-JKx" secondAttribute="bottom" id="7WG-Ny-r8M"/>
-                                                            <constraint firstAttribute="height" constant="320" id="L90-pJ-1gE"/>
-                                                            <constraint firstAttribute="width" constant="320" id="Vjc-jC-8Ax"/>
+                                                            <constraint firstAttribute="height" constant="70" id="L90-pJ-1gE"/>
+                                                            <constraint firstAttribute="width" constant="70" id="Vjc-jC-8Ax"/>
                                                             <constraint firstAttribute="trailing" secondItem="eQa-Lg-JKx" secondAttribute="trailing" id="dyz-AS-3nu"/>
                                                             <constraint firstItem="eQa-Lg-JKx" firstAttribute="leading" secondItem="nFX-rA-Hkf" secondAttribute="leading" id="hhd-w3-ngw"/>
                                                             <constraint firstItem="eQa-Lg-JKx" firstAttribute="top" secondItem="nFX-rA-Hkf" secondAttribute="top" id="j1a-C2-39P"/>
@@ -53,22 +53,22 @@
                                                                 <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                <real key="value" value="4"/>
+                                                                <real key="value" value="2"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scratchSurface" translatesAutoresizingMaskIntoConstraints="NO" id="UaG-qs-UFb" userLabel="Scratch Image View" customClass="SRScratchView" customModule="SRScratchView">
-                                                        <rect key="frame" x="10" y="115.5" width="320" height="320"/>
+                                                        <rect key="frame" x="15" y="45.5" width="70" height="70"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="320" id="g0P-87-Yg2"/>
-                                                            <constraint firstAttribute="width" constant="320" id="hVP-f0-Ifm"/>
+                                                            <constraint firstAttribute="height" constant="70" id="g0P-87-Yg2"/>
+                                                            <constraint firstAttribute="width" constant="70" id="hVP-f0-Ifm"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                                 <color key="value" red="0.80784026019999999" green="0.77888295860000001" blue="0.54172346019999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                <real key="value" value="5"/>
+                                                                <real key="value" value="2"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
                                                                 <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -111,10 +111,10 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wod-BV-qP7" userLabel="Back View">
-                                                <rect key="frame" x="0.0" y="0.0" width="340" height="551"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="161"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nB-Fn-2Ph">
-                                                        <rect key="frame" x="-0.5" y="-5" width="340" height="560"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="161"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                         <connections>
@@ -122,11 +122,11 @@
                                                         </connections>
                                                     </button>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="HCA-Qk-SdN" userLabel="Back background">
-                                                        <rect key="frame" x="-0.5" y="0.0" width="340" height="551"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="161"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="50"/>
+                                                                <integer key="value" value="10"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
@@ -142,20 +142,20 @@
                                             <constraint firstItem="Wod-BV-qP7" firstAttribute="leading" secondItem="1oA-yS-aju" secondAttribute="leading" id="Rku-GS-5h5"/>
                                             <constraint firstAttribute="trailing" secondItem="a6d-Fw-Nqg" secondAttribute="trailing" id="Twi-Um-38K"/>
                                             <constraint firstItem="a6d-Fw-Nqg" firstAttribute="top" secondItem="1oA-yS-aju" secondAttribute="top" id="YR2-PF-0xj"/>
-                                            <constraint firstAttribute="height" constant="551" id="buZ-7Y-Wnr"/>
+                                            <constraint firstAttribute="height" constant="161" id="buZ-7Y-Wnr"/>
                                             <constraint firstItem="Wod-BV-qP7" firstAttribute="top" secondItem="1oA-yS-aju" secondAttribute="top" id="cso-53-txF"/>
-                                            <constraint firstAttribute="width" constant="340" id="eBI-TS-qPM"/>
+                                            <constraint firstAttribute="width" constant="100" id="eBI-TS-qPM"/>
                                             <constraint firstAttribute="bottom" secondItem="a6d-Fw-Nqg" secondAttribute="bottom" id="pAN-rd-KTc"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="50"/>
+                                                <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                 <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="5"/>
+                                                <real key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
@@ -163,9 +163,9 @@
                                 <constraints>
                                     <constraint firstItem="jEA-97-o8l" firstAttribute="leading" secondItem="f7j-eT-toq" secondAttribute="leading" id="ERX-x7-x2K"/>
                                     <constraint firstAttribute="trailing" secondItem="jEA-97-o8l" secondAttribute="trailing" id="PGY-hv-HKq"/>
-                                    <constraint firstItem="1oA-yS-aju" firstAttribute="centerX" secondItem="f7j-eT-toq" secondAttribute="centerX" id="UTx-fy-i25"/>
+                                    <constraint firstItem="1oA-yS-aju" firstAttribute="centerX" secondItem="f7j-eT-toq" secondAttribute="centerX" constant="-119.5" id="UTx-fy-i25"/>
                                     <constraint firstAttribute="bottom" secondItem="jEA-97-o8l" secondAttribute="bottom" id="cmf-I2-7Vo"/>
-                                    <constraint firstItem="1oA-yS-aju" firstAttribute="centerY" secondItem="f7j-eT-toq" secondAttribute="centerY" id="sXC-Ph-a4F"/>
+                                    <constraint firstItem="1oA-yS-aju" firstAttribute="centerY" secondItem="f7j-eT-toq" secondAttribute="centerY" constant="-195" id="sXC-Ph-a4F"/>
                                     <constraint firstItem="jEA-97-o8l" firstAttribute="top" secondItem="f7j-eT-toq" secondAttribute="top" id="tRK-99-sI5"/>
                                 </constraints>
                             </view>

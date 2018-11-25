@@ -25,7 +25,7 @@ class ViewController: UIViewController,SRScratchViewDelegate{
     @IBOutlet weak var cardView: UIView! //FrontView (View:scratch,images,..)
     @IBOutlet weak var backCardView: UIView! //CardView (View: front&back
     
-    @IBOutlet weak var backView: UIView!
+    @IBOutlet weak var backView: UIView! //BackView
     
     
     @IBAction func snowButton(_ sender: UIButton) {
@@ -56,7 +56,7 @@ class ViewController: UIViewController,SRScratchViewDelegate{
         self.scratchCardView.layer.cornerRadius = self.scratchImageView.frame.height/2
         self.scratchCardView.layer.masksToBounds = true
     
-        self.cardView.cornerRadius = 50
+        self.cardView.cornerRadius = 10
         self.cardView.layer.masksToBounds = true
         
         
