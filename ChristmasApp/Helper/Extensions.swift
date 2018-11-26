@@ -208,3 +208,18 @@ extension UIViewController {
         return cell
     }
 }
+
+extension UIView {
+    /**Flip the card, only one time, NO reverse.
+     - parameter view1: the view to flip.
+     - parameter view2: the final view.
+     */
+    func flipCard1 (view1:UIView?,view2:UIView?){
+        
+        UIView.transition(from: view1!,
+                          to: view2!,
+                          duration: 0.5,
+                          options: [.transitionFlipFromRight, .showHideTransitionViews],
+                          completion: nil)
+    }
+}

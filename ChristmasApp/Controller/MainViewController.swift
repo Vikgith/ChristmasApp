@@ -8,8 +8,11 @@
 
 import UIKit
 import VerticalCardSwiper
+import SRScratchView
 
 class MainViewController: UIViewController, VerticalCardSwiperDelegate, VerticalCardSwiperDatasource {
+    
+    
     
     @IBOutlet weak var cardSwiper: VerticalCardSwiper!
     
@@ -24,14 +27,14 @@ class MainViewController: UIViewController, VerticalCardSwiperDelegate, Vertical
     
     
     func numberOfCards(verticalCardSwiperView: VerticalCardSwiperView) -> Int {
-        return 5 //Display 5 cards
+        return 3 //Display 5 cards
     }
     
     func cardForItemAt(verticalCardSwiperView: VerticalCardSwiperView, cardForItemAt index: Int) -> CardCell {
         
         let cardCell = verticalCardSwiperView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: index) as! CardCellController
         
-        cardCell.setRandomBackgroundColor()
+        //cardCell.setRandomBackgroundColor()
         
         return cardCell
     }
