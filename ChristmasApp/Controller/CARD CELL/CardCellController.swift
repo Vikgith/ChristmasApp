@@ -30,6 +30,10 @@ class CardCellController: CardCell, SRScratchViewDelegate{
     func scratchCardEraseProgress(eraseProgress: Float) {
         print(eraseProgress)
         
+//        self.scratchView.cornerRadius = 30
+//        self.scratchView.layer.masksToBounds = true
+//        self.scratchView.delegate = self
+        
         if eraseProgress > 50.0{
             UIView.animate(withDuration: 0.5, animations: {
                 self.scratchView.alpha = 0.0

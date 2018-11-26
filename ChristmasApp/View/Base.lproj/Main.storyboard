@@ -201,7 +201,18 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="akU-HL-4u4" userLabel="Card Swiper" customClass="VerticalCardSwiper" customModule="VerticalCardSwiper">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="b1" translatesAutoresizingMaskIntoConstraints="NO" id="bhI-WM-xXy" userLabel="Background">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1042075976729393" green="0.66611385345458984" blue="0.75897437334060669" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="bhI-WM-xXy" secondAttribute="bottom" id="Col-Bs-zxh"/>
+                                    <constraint firstItem="bhI-WM-xXy" firstAttribute="top" secondItem="akU-HL-4u4" secondAttribute="top" id="qFp-m5-qb2"/>
+                                    <constraint firstItem="bhI-WM-xXy" firstAttribute="leading" secondItem="akU-HL-4u4" secondAttribute="leading" id="rCN-9S-CMe"/>
+                                    <constraint firstAttribute="trailing" secondItem="bhI-WM-xXy" secondAttribute="trailing" id="vFO-Ty-25G"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -224,6 +235,7 @@
     </scenes>
     <resources>
         <image name="Background" width="931.5" height="2016"/>
+        <image name="b1" width="1000" height="1000"/>
         <image name="back" width="340.5" height="552.75"/>
         <image name="front" width="340.5" height="552.75"/>
         <image name="happyChristmas" width="768" height="768"/>
