@@ -36,7 +36,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scratchSurface" translatesAutoresizingMaskIntoConstraints="NO" id="apf-EJ-qjZ" userLabel="Scratch View">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scratchSurface" translatesAutoresizingMaskIntoConstraints="NO" id="apf-EJ-qjZ" userLabel="Scratch View" customClass="SRScratchView" customModule="SRScratchView">
                                         <rect key="frame" x="15" y="120" width="294" height="280"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -62,7 +62,7 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="30"/>
+                                        <integer key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -72,9 +72,8 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="front" translatesAutoresizingMaskIntoConstraints="NO" id="Kqf-VY-oaF" userLabel="back background">
                                         <rect key="frame" x="0.0" y="0.0" width="324" height="520"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezB-8I-I1k">
-                                        <rect key="frame" x="0.0" y="0.0" width="339" height="431"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezB-8I-I1k">
+                                        <rect key="frame" x="0.0" y="0.0" width="324" height="520"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="30"/>
@@ -87,14 +86,18 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="ezB-8I-I1k" firstAttribute="leading" secondItem="3Zd-cy-e5a" secondAttribute="leading" id="0GB-gL-37E"/>
+                                    <constraint firstAttribute="trailing" secondItem="ezB-8I-I1k" secondAttribute="trailing" id="76A-Jc-gqj"/>
                                     <constraint firstAttribute="trailing" secondItem="Kqf-VY-oaF" secondAttribute="trailing" id="ATJ-fn-udU"/>
                                     <constraint firstAttribute="bottom" secondItem="Kqf-VY-oaF" secondAttribute="bottom" id="BkE-DZ-jQi"/>
                                     <constraint firstItem="Kqf-VY-oaF" firstAttribute="top" secondItem="3Zd-cy-e5a" secondAttribute="top" id="IZK-fG-jwq"/>
+                                    <constraint firstItem="ezB-8I-I1k" firstAttribute="top" secondItem="3Zd-cy-e5a" secondAttribute="top" id="eCR-Zk-ml1"/>
+                                    <constraint firstAttribute="bottom" secondItem="ezB-8I-I1k" secondAttribute="bottom" id="ffX-1B-Gaa"/>
                                     <constraint firstItem="Kqf-VY-oaF" firstAttribute="leading" secondItem="3Zd-cy-e5a" secondAttribute="leading" id="s3J-dv-Nzo"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="30"/>
+                                        <integer key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -123,6 +126,7 @@
             <connections>
                 <outlet property="backView" destination="3Zd-cy-e5a" id="ikH-ut-kwz"/>
                 <outlet property="frontView" destination="4zm-dt-IJs" id="uxY-V7-Jqn"/>
+                <outlet property="scratchView" destination="apf-EJ-qjZ" id="blg-1N-vhH"/>
             </connections>
             <point key="canvasLocation" x="448" y="246.47676161919043"/>
         </collectionViewCell>

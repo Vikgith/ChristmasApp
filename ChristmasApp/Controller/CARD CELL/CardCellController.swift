@@ -11,19 +11,39 @@ import UIKit
 import VerticalCardSwiper
 import SRScratchView
 
-class CardCellController: CardCell {
+class CardCellController: CardCell, SRScratchViewDelegate{
     
-
+    @IBOutlet weak var scratchView: SRScratchView!
+    
+    
     @IBOutlet weak var frontView: UIView!
     @IBOutlet weak var backView: UIView!
     
     @IBAction func touchCellButton(_ sender: UIButton) {
         
         self.flipCard1(view1: backView, view2: frontView)
-        self.pulsate()
+        self.boing2()
         
         sender.isEnabled = false
     }
+    
+    func scratchCardEraseProgress(eraseProgress: Float) {
+        print(eraseProgress)
+        
+        if eraseProgress > 50.0{
+            UIView.animate(withDuration: 0.5, animations: {
+                self.scratchView.alpha = 0.0
+            })
+        }
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        
+        
+    }
+    
     
     /**
      This function calculate and set a random backgroundcolor.
@@ -39,7 +59,7 @@ class CardCellController: CardCell {
     
     override func layoutSubviews() {
         
-        self.layer.cornerRadius = 30
+        self.layer.cornerRadius = 15
         
         super.layoutSubviews()
     }

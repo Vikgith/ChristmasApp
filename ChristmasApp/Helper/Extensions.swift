@@ -223,3 +223,18 @@ extension UIView {
                           completion: nil)
     }
 }
+
+extension UIView {
+    
+    func boing2(){
+        self.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)//How much it expands (0 much, 0.9 little)
+        UIView.animate(withDuration:2, //Duration (Normal is 2)
+            delay: 0, //Time to take to start the animation
+            usingSpringWithDamping: CGFloat(0.2), //How much vibration (0.1:much, 1:little)
+            initialSpringVelocity: CGFloat(6),//Makes it bigger in the beggining (normal:6,big:100)
+            options: UIView.AnimationOptions.allowUserInteraction,
+            animations: { self.transform = CGAffineTransform.identity },
+            completion: { Void in()  } )
+    }
+    
+}
