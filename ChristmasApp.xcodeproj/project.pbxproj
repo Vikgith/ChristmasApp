@@ -107,7 +107,6 @@
 		EF5693F121A7B61700374B85 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				EF5693DE21A7AC4900374B85 /* AppDelegate.swift */,
 				EF5693E021A7AC4900374B85 /* ScratchCardViewController.swift */,
 				EFE4F36721AA7BBF00E56EAC /* MainViewController.swift */,
 				EFE4F36D21AB2F0E00E56EAC /* CARD CELL */,
@@ -119,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				EF5693F421A7B66A00374B85 /* Extensions.swift */,
+				EF5693DE21A7AC4900374B85 /* AppDelegate.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
