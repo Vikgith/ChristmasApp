@@ -29,9 +29,7 @@ class CardCellController: CardCell, SRScratchViewDelegate{
     
     func scratchCardEraseProgress(eraseProgress: Float) {
         print(eraseProgress)
-        
-//        self.scratchView.cornerRadius = 30
-//        self.scratchView.layer.masksToBounds = true
+
 //        self.scratchView.delegate = self
         
         if eraseProgress > 50.0{
@@ -50,32 +48,36 @@ class CardCellController: CardCell, SRScratchViewDelegate{
         let randomGreen:CGFloat = CGFloat(arc4random()) / CGFloat(UInt32.max)
         let randomBlue:CGFloat = CGFloat(arc4random()) / CGFloat(UInt32.max)
         self.backgroundColor = UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
-        
-        self.layer.cornerRadius = 15
 
     }
     
     override func layoutSubviews() {
         
-        let cornerRadius : CGFloat = 50
+        let cardRadius : CGFloat = 60
+        let scratchRadius : CGFloat = 150
         
-        self.layer.cornerRadius = 15
-        
-        frontView.cornerRadius = cornerRadius
+        frontView.cornerRadius = cardRadius
         frontView.layer.masksToBounds = true
         
-        backView.cornerRadius = cornerRadius
+        backView.cornerRadius = cardRadius
         backView.layer.masksToBounds = true
         
-        scratchView.cornerRadius = cornerRadius
+        scratchView.cornerRadius = scratchRadius
         scratchView.layer.masksToBounds = true
         
-        winView.cornerRadius = cornerRadius
+        winView.cornerRadius = scratchRadius
         winView.layer.masksToBounds = true
-        
-        
         
         super.layoutSubviews()
     }
+    
+//    func setCollectionViewDataSourceDelegate <D: UICollectionViewDataSource & UICollectionViewDelegate>(dataSourceDelegate: D) {
+//
+//        scratchView.delegate = self
+////        dayTicks.delegate = dataSourceDelegate
+////        dayTicks.dataSource = dataSourceDelegate
+////        dayTicks.reloadData()
+//
+//    }
     
 }
