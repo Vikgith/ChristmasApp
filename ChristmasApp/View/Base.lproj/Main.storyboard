@@ -224,6 +224,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="waK-SK-K72"/>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <connections>
                         <outlet property="cardSwiper" destination="akU-HL-4u4" id="l4y-nS-lLv"/>
                     </connections>

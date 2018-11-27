@@ -39,4 +39,12 @@ class MainViewController: UIViewController, VerticalCardSwiperDelegate, Vertical
         return cardCell
     }
     
+    
+    func didTapCard(verticalCardSwiperView: VerticalCardSwiperView, index: Int) {
+        
+        print("Card nº\(index) taped")
+        
+    }
+    
+    
 }

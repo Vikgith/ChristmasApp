@@ -76,11 +76,5 @@ class ViewController: UIViewController,SRScratchViewDelegate{
                           completion: nil)
     }
     
-    func zoomView(){
-        UIView.animate(withDuration: 5) {
-            
-        }
-    }
-    
 }
 

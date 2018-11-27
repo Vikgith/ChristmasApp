@@ -41,14 +41,6 @@ class CardCellController: CardCell, SRScratchViewDelegate{
         }
     }
     
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        
-        
-        
-    }
-    
-    
     /**
      This function calculate and set a random backgroundcolor.
      */
@@ -58,14 +50,9 @@ class CardCellController: CardCell, SRScratchViewDelegate{
         let randomGreen:CGFloat = CGFloat(arc4random()) / CGFloat(UInt32.max)
         let randomBlue:CGFloat = CGFloat(arc4random()) / CGFloat(UInt32.max)
         self.backgroundColor = UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
+        
+        self.layer.cornerRadius = 15
 
     }
     
-    override func layoutSubviews() {
-        
-        self.layer.cornerRadius = 15
-        
-        super.layoutSubviews()
-    }
-
 }
