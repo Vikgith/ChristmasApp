@@ -62,7 +62,7 @@ class CardCellController: CardCell, SRScratchViewDelegate{
     override func layoutSubviews() {
         
         let cardRadius : CGFloat = 60
-        let scratchRadius : CGFloat = 150
+        let scratchRadius : CGFloat = 100
         
         frontView.cornerRadius = cardRadius
         frontView.layer.masksToBounds = true

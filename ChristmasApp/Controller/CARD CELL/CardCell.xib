@@ -13,23 +13,23 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExampleCardCell" customModule="ChristmasApp" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CardCell" id="Jn7-8p-a1f" customClass="CardCellController" customModule="ChristmasApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="324" height="520"/>
+            <rect key="frame" x="0.0" y="0.0" width="333" height="478"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                <rect key="frame" x="0.0" y="0.0" width="324" height="520"/>
+                <rect key="frame" x="0.0" y="0.0" width="333" height="478"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="osE-uw-1oU" userLabel="Cell View">
-                        <rect key="frame" x="0.0" y="0.0" width="324" height="520"/>
+                        <rect key="frame" x="0.0" y="0.0" width="333" height="478"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Zd-cy-e5a" userLabel="Back View">
-                                <rect key="frame" x="0.0" y="0.0" width="324" height="520"/>
+                                <rect key="frame" x="0.0" y="0.0" width="333" height="478"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="front" translatesAutoresizingMaskIntoConstraints="NO" id="Kqf-VY-oaF" userLabel="back background">
-                                        <rect key="frame" x="0.0" y="0.0" width="324" height="520"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="478"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezB-8I-I1k">
-                                        <rect key="frame" x="0.0" y="0.0" width="324" height="520"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="478"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="30"/>
@@ -64,13 +64,13 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4zm-dt-IJs" userLabel="Front View">
-                                <rect key="frame" x="0.0" y="0.0" width="324" height="520"/>
+                                <rect key="frame" x="0.0" y="0.0" width="333" height="478"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="VOc-aq-FQm" userLabel="front background">
-                                        <rect key="frame" x="0.0" y="0.0" width="324" height="520"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="478"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="happyChristmas" translatesAutoresizingMaskIntoConstraints="NO" id="53h-fZ-d6o" userLabel="Win View">
-                                        <rect key="frame" x="15" y="120" width="294" height="280"/>
+                                        <rect key="frame" x="15" y="100" width="303" height="278"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="15"/>
@@ -84,7 +84,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scratchSurface" translatesAutoresizingMaskIntoConstraints="NO" id="apf-EJ-qjZ" userLabel="Scratch View" customClass="SRScratchView" customModule="SRScratchView">
-                                        <rect key="frame" x="15" y="120" width="294" height="280"/>
+                                        <rect key="frame" x="15" y="100" width="303" height="278"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="15"/>
@@ -110,7 +110,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2A-1a-41U">
-                                        <rect key="frame" x="90" y="420" width="144" height="63"/>
+                                        <rect key="frame" x="90" y="398" width="153" height="43"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                         <state key="normal" title="RELOAD">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -127,11 +127,11 @@
                                     <constraint firstAttribute="trailing" secondItem="apf-EJ-qjZ" secondAttribute="trailing" constant="15" id="DJy-QL-60S"/>
                                     <constraint firstAttribute="bottom" secondItem="VOc-aq-FQm" secondAttribute="bottom" id="EK5-wU-qcw"/>
                                     <constraint firstItem="C2A-1a-41U" firstAttribute="leading" secondItem="4zm-dt-IJs" secondAttribute="leading" constant="90" id="JKZ-90-Cd3"/>
-                                    <constraint firstItem="apf-EJ-qjZ" firstAttribute="top" secondItem="4zm-dt-IJs" secondAttribute="top" constant="120" id="JaN-ye-Ugc"/>
-                                    <constraint firstAttribute="bottom" secondItem="53h-fZ-d6o" secondAttribute="bottom" constant="120" id="N1O-7F-srb"/>
-                                    <constraint firstItem="53h-fZ-d6o" firstAttribute="top" secondItem="4zm-dt-IJs" secondAttribute="top" constant="120" id="VQp-MW-Rm8"/>
+                                    <constraint firstItem="apf-EJ-qjZ" firstAttribute="top" secondItem="4zm-dt-IJs" secondAttribute="top" constant="100" id="JaN-ye-Ugc"/>
+                                    <constraint firstAttribute="bottom" secondItem="53h-fZ-d6o" secondAttribute="bottom" constant="100" id="N1O-7F-srb"/>
+                                    <constraint firstItem="53h-fZ-d6o" firstAttribute="top" secondItem="4zm-dt-IJs" secondAttribute="top" constant="100" id="VQp-MW-Rm8"/>
                                     <constraint firstItem="VOc-aq-FQm" firstAttribute="leading" secondItem="4zm-dt-IJs" secondAttribute="leading" id="bDB-3j-mRp"/>
-                                    <constraint firstAttribute="bottom" secondItem="apf-EJ-qjZ" secondAttribute="bottom" constant="120" id="bjR-IY-J6e"/>
+                                    <constraint firstAttribute="bottom" secondItem="apf-EJ-qjZ" secondAttribute="bottom" constant="100" id="bjR-IY-J6e"/>
                                     <constraint firstItem="53h-fZ-d6o" firstAttribute="leading" secondItem="4zm-dt-IJs" secondAttribute="leading" constant="15" id="ewb-uq-Kr9"/>
                                     <constraint firstItem="C2A-1a-41U" firstAttribute="top" secondItem="53h-fZ-d6o" secondAttribute="bottom" constant="20" id="j34-Wr-p6U"/>
                                     <constraint firstAttribute="trailing" secondItem="VOc-aq-FQm" secondAttribute="trailing" id="kLb-Lr-bxE"/>
@@ -172,14 +172,14 @@
                 <constraint firstItem="osE-uw-1oU" firstAttribute="top" secondItem="Jn7-8p-a1f" secondAttribute="top" id="OhQ-my-CvD"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="1Hc-zX-nnH"/>
-            <size key="customSize" width="366" height="463"/>
+            <size key="customSize" width="375" height="421"/>
             <connections>
                 <outlet property="backView" destination="3Zd-cy-e5a" id="ikH-ut-kwz"/>
                 <outlet property="frontView" destination="4zm-dt-IJs" id="uxY-V7-Jqn"/>
                 <outlet property="scratchView" destination="apf-EJ-qjZ" id="blg-1N-vhH"/>
                 <outlet property="winView" destination="53h-fZ-d6o" id="0U0-eq-RhA"/>
             </connections>
-            <point key="canvasLocation" x="448" y="246.47676161919043"/>
+            <point key="canvasLocation" x="455.19999999999999" y="265.36731634182911"/>
         </collectionViewCell>
     </objects>
     <resources>
