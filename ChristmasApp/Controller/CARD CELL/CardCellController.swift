@@ -14,7 +14,7 @@ import SRScratchView
 class CardCellController: CardCell, SRScratchViewDelegate{
     
     @IBOutlet weak var scratchView: SRScratchView!
-    
+    @IBOutlet weak var winView: UIImageView!
     
     @IBOutlet weak var frontView: UIView!
     @IBOutlet weak var backView: UIView!
@@ -53,6 +53,29 @@ class CardCellController: CardCell, SRScratchViewDelegate{
         
         self.layer.cornerRadius = 15
 
+    }
+    
+    override func layoutSubviews() {
+        
+        let cornerRadius : CGFloat = 50
+        
+        self.layer.cornerRadius = 15
+        
+        frontView.cornerRadius = cornerRadius
+        frontView.layer.masksToBounds = true
+        
+        backView.cornerRadius = cornerRadius
+        backView.layer.masksToBounds = true
+        
+        scratchView.cornerRadius = cornerRadius
+        scratchView.layer.masksToBounds = true
+        
+        winView.cornerRadius = cornerRadius
+        winView.layer.masksToBounds = true
+        
+        
+        
+        super.layoutSubviews()
     }
     
 }

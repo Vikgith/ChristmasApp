@@ -158,7 +158,7 @@ extension UIViewController {
     }
     func makeEmitterCell(color: UIColor) -> CAEmitterCell {
         let cell = CAEmitterCell()
-        cell.birthRate = 10
+        cell.birthRate = 1
         cell.lifetime = 7.0
         cell.lifetimeRange = 0
         cell.color = color.cgColor
