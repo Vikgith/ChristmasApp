@@ -27,6 +27,14 @@ class CardCellController: CardCell, SRScratchViewDelegate{
         sender.isEnabled = false
     }
     
+    @IBAction func reloadButton(_ sender: UIButton) {
+        sender.pulsate()
+        
+        
+        
+    }
+    
+    
     func scratchCardEraseProgress(eraseProgress: Float) {
         print(eraseProgress)
 

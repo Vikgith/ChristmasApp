@@ -14,7 +14,7 @@ class MainViewController: UIViewController, VerticalCardSwiperDelegate, Vertical
     
     
     
-    @IBOutlet weak var cardSwiper: VerticalCardSwiper!
+    @IBOutlet weak public var cardSwiper: VerticalCardSwiper!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +42,7 @@ class MainViewController: UIViewController, VerticalCardSwiperDelegate, Vertical
     
     func didTapCard(verticalCardSwiperView: VerticalCardSwiperView, index: Int) {
         
-        print("Card nº\(index) taped")
+        print("Card nº\(index) taped")        
         
     }
     
