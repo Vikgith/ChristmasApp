@@ -99,7 +99,6 @@
 			isa = PBXGroup;
 			children = (
 				EF5693E221A7AC4900374B85 /* Main.storyboard */,
-				EF5693E721A7AC4900374B85 /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -119,6 +118,7 @@
 			children = (
 				EF5693F421A7B66A00374B85 /* Extensions.swift */,
 				EF5693DE21A7AC4900374B85 /* AppDelegate.swift */,
+				EF5693E721A7AC4900374B85 /* LaunchScreen.storyboard */,
 			);
 			path = Helper;
 			sourceTree = "<group>";

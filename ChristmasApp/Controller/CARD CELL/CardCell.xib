@@ -22,47 +22,6 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="osE-uw-1oU" userLabel="Cell View">
                         <rect key="frame" x="0.0" y="0.0" width="333" height="478"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Zd-cy-e5a" userLabel="Back View">
-                                <rect key="frame" x="0.0" y="0.0" width="333" height="478"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="front" translatesAutoresizingMaskIntoConstraints="NO" id="Kqf-VY-oaF" userLabel="back background">
-                                        <rect key="frame" x="0.0" y="0.0" width="333" height="478"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezB-8I-I1k">
-                                        <rect key="frame" x="0.0" y="0.0" width="333" height="478"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="30"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="touchCellButton:" destination="Jn7-8p-a1f" eventType="touchUpInside" id="pTQ-Ns-i0y"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstItem="ezB-8I-I1k" firstAttribute="leading" secondItem="3Zd-cy-e5a" secondAttribute="leading" id="0GB-gL-37E"/>
-                                    <constraint firstAttribute="trailing" secondItem="ezB-8I-I1k" secondAttribute="trailing" id="76A-Jc-gqj"/>
-                                    <constraint firstAttribute="trailing" secondItem="Kqf-VY-oaF" secondAttribute="trailing" id="ATJ-fn-udU"/>
-                                    <constraint firstAttribute="bottom" secondItem="Kqf-VY-oaF" secondAttribute="bottom" id="BkE-DZ-jQi"/>
-                                    <constraint firstItem="Kqf-VY-oaF" firstAttribute="top" secondItem="3Zd-cy-e5a" secondAttribute="top" id="IZK-fG-jwq"/>
-                                    <constraint firstItem="ezB-8I-I1k" firstAttribute="top" secondItem="3Zd-cy-e5a" secondAttribute="top" id="eCR-Zk-ml1"/>
-                                    <constraint firstAttribute="bottom" secondItem="ezB-8I-I1k" secondAttribute="bottom" id="ffX-1B-Gaa"/>
-                                    <constraint firstItem="Kqf-VY-oaF" firstAttribute="leading" secondItem="3Zd-cy-e5a" secondAttribute="leading" id="s3J-dv-Nzo"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4zm-dt-IJs" userLabel="Front View">
                                 <rect key="frame" x="0.0" y="0.0" width="333" height="478"/>
                                 <subviews>
@@ -148,6 +107,47 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" red="0.1215686277" green="0.1294117719" blue="0.1411764771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Zd-cy-e5a" userLabel="Back View">
+                                <rect key="frame" x="0.0" y="0.0" width="333" height="478"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="front" translatesAutoresizingMaskIntoConstraints="NO" id="Kqf-VY-oaF" userLabel="back background">
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="478"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezB-8I-I1k">
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="478"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="touchCellButton:" destination="Jn7-8p-a1f" eventType="touchUpInside" id="pTQ-Ns-i0y"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="ezB-8I-I1k" firstAttribute="leading" secondItem="3Zd-cy-e5a" secondAttribute="leading" id="0GB-gL-37E"/>
+                                    <constraint firstAttribute="trailing" secondItem="ezB-8I-I1k" secondAttribute="trailing" id="76A-Jc-gqj"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kqf-VY-oaF" secondAttribute="trailing" id="ATJ-fn-udU"/>
+                                    <constraint firstAttribute="bottom" secondItem="Kqf-VY-oaF" secondAttribute="bottom" id="BkE-DZ-jQi"/>
+                                    <constraint firstItem="Kqf-VY-oaF" firstAttribute="top" secondItem="3Zd-cy-e5a" secondAttribute="top" id="IZK-fG-jwq"/>
+                                    <constraint firstItem="ezB-8I-I1k" firstAttribute="top" secondItem="3Zd-cy-e5a" secondAttribute="top" id="eCR-Zk-ml1"/>
+                                    <constraint firstAttribute="bottom" secondItem="ezB-8I-I1k" secondAttribute="bottom" id="ffX-1B-Gaa"/>
+                                    <constraint firstItem="Kqf-VY-oaF" firstAttribute="leading" secondItem="3Zd-cy-e5a" secondAttribute="leading" id="s3J-dv-Nzo"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
