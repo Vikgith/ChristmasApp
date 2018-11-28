@@ -13,37 +13,61 @@ class ViewController: UIViewController,SRScratchViewDelegate{
  
     //MARK: VARIABLES AND LET
     private var isFlipped: Bool = false
+    var num = 0
     
     //MARK: OUTLETS ///////////////////////////////////////////////////////
     //VIEW 1
-    @IBOutlet weak var winImage1: UIImageView!
-    @IBOutlet weak var scratchImage1: SRScratchView!
-    @IBOutlet weak var cardView1: UIView! 
+    @IBOutlet weak var cardView1: UIView!
     @IBOutlet weak var frontView1: UIView!
     @IBOutlet weak var backView1: UIView!
+    
+    @IBOutlet weak var winImage1: UIImageView!
+    @IBOutlet weak var scratchImage1: SRScratchView!
+    
     //VIEW 2
+    @IBOutlet weak var cardView2: UIView!
+    @IBOutlet weak var frontView2: UIView!
+    @IBOutlet weak var backView2: UIView!
+    
+    @IBOutlet weak var winImage2: UIImageView!
+    @IBOutlet weak var scratchImage2: SRScratchView!
     
     //VIEW 3
+    @IBOutlet weak var cardView3: UIView!
+    @IBOutlet weak var frontView3: UIView!
+    @IBOutlet weak var backView3: UIView!
+    
+    @IBOutlet weak var winImage3: UIImageView!
+    @IBOutlet weak var scratchImage3: SRScratchView!
     
     //VIEW 4
+    @IBOutlet weak var cardView4: UIView!
+    @IBOutlet weak var frontView4: UIView!
+    @IBOutlet weak var backView4: UIView!
     
+    @IBOutlet weak var winImage4: UIImageView!
+    @IBOutlet weak var scratchImage4: SRScratchView!
     
+    //BUTTON
     @IBAction func clickCardButton(_ sender: UIButton) {
+        
+        isFlipped = false
+        
         if sender.tag==1 {
-            print("1 pressed")
-            
-            UIView.animate(withDuration:0.6, animations: { self.cardView1.transform = CGAffineTransform(scaleX:3,y:3) })
+            num = 1
+//            UIView.animate(withDuration:0.6, animations: { self.cardView2.transform = CGAffineTransform(scaleX:3,y:3) })
 
             flipCard(view1: backView1, view2: frontView1)
         } else if sender.tag==2 {
-            print("2 pressed")
+            num=2
+            flipCard(view1: backView2, view2: frontView2)
         } else if sender.tag==3 {
-            print("3 pressed")
+            num=3
+            flipCard(view1: backView3, view2: frontView3)
         } else if sender.tag==4 {
-            print("4 pressed")
+            num=4
+            flipCard(view1: backView4, view2: frontView4)
         }
-        
-        
     }
     
     //MARK: VIEW DID LOAD //////////////////////////////////////////////////
@@ -51,7 +75,10 @@ class ViewController: UIViewController,SRScratchViewDelegate{
         
         setLayers()
         self.scratchImage1.delegate = self
-        scratchImage1.lineWidth = 20
+        self.scratchImage2.delegate = self
+        self.scratchImage3.delegate = self
+        self.scratchImage4.delegate = self
+        scratchImage2.lineWidth = 20
         
     }
     
@@ -62,11 +89,26 @@ class ViewController: UIViewController,SRScratchViewDelegate{
         
         print(eraseProgress)
         
-        if eraseProgress > 50.0{
+        if eraseProgress > 50{
             UIView.animate(withDuration: 0.5, animations: {
-                self.scratchImage1.alpha = 0.0
-                self.cardView1.boing()
-                self.createParticles()
+                if self.num == 1{
+                    self.scratchImage1.alpha = 0.0
+                    self.cardView1.boing()
+                    self.createParticles()
+                }else if self.num == 2{
+                    self.scratchImage2.alpha = 0.0
+                    self.cardView2.boing()
+                    self.createParticles()
+                }else if self.num == 3{
+                    self.scratchImage3.alpha = 0.0
+                    self.cardView3.boing()
+                    self.createParticles()
+                }else if self.num == 4{
+                    self.scratchImage4.alpha = 0.0
+                    self.cardView4.boing()
+                    self.createParticles()
+                }
+                
             })
         }
     }
@@ -90,13 +132,36 @@ class ViewController: UIViewController,SRScratchViewDelegate{
     func setLayers(){
         //width of srcatch line
         
-        
-        self.scratchImage1.layer.cornerRadius = self.scratchImage1.frame.height/2
+        self.scratchImage1.layer.cornerRadius = self.scratchImage2.frame.height/2
         self.scratchImage1.layer.masksToBounds = true
-        self.winImage1.layer.cornerRadius = self.scratchImage1.frame.height/2
+        self.winImage1.layer.cornerRadius = self.scratchImage2.frame.height/2
         self.winImage1.layer.masksToBounds = true
         self.frontView1.cornerRadius = 10
         self.frontView1.layer.masksToBounds = true
+        
+        self.scratchImage2.layer.cornerRadius = self.scratchImage2.frame.height/2
+        self.scratchImage2.layer.masksToBounds = true
+        self.winImage2.layer.cornerRadius = self.scratchImage2.frame.height/2
+        self.winImage2.layer.masksToBounds = true
+        self.frontView2.cornerRadius = 10
+        self.frontView2.layer.masksToBounds = true
+
+        
+        self.scratchImage3.layer.cornerRadius = self.scratchImage2.frame.height/2
+        self.scratchImage3.layer.masksToBounds = true
+        self.winImage3.layer.cornerRadius = self.scratchImage2.frame.height/2
+        self.winImage3.layer.masksToBounds = true
+        self.frontView3.cornerRadius = 10
+        self.frontView3.layer.masksToBounds = true
+
+        
+        self.scratchImage4.layer.cornerRadius = self.scratchImage2.frame.height/2
+        self.scratchImage4.layer.masksToBounds = true
+        self.winImage4.layer.cornerRadius = self.scratchImage2.frame.height/2
+        self.winImage4.layer.masksToBounds = true
+        self.frontView4.cornerRadius = 10
+        self.frontView4.layer.masksToBounds = true
+
     }
     
 }

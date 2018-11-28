@@ -18,18 +18,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="jEA-97-o8l" userLabel="Background">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="jEA-97-o8l" userLabel="Background">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f7j-eT-toq" userLabel="GeneralView">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
-                                    <stackView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="vAi-3I-JmL">
-                                        <rect key="frame" x="20" y="20" width="335" height="563"/>
+                                    <stackView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="equalSpacing" alignment="top" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="vAi-3I-JmL">
+                                        <rect key="frame" x="37" y="90" width="300" height="422"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="135" translatesAutoresizingMaskIntoConstraints="NO" id="Xbd-Tk-ljq">
-                                                <rect key="frame" x="0.0" y="0.0" width="335" height="161"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="Xbd-Tk-ljq">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="161"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1oA-yS-aju" userLabel="Card View">
                                                         <rect key="frame" x="0.0" y="0.0" width="100" height="161"/>
@@ -42,6 +42,14 @@
                                                                     </imageView>
                                                                     <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="happyChristmas" translatesAutoresizingMaskIntoConstraints="NO" id="eQa-Lg-JKx" userLabel="WinImage">
                                                                         <rect key="frame" x="5" y="35" width="90" height="91"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                <real key="value" value="2"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
                                                                     </imageView>
                                                                     <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scratchSurface" translatesAutoresizingMaskIntoConstraints="NO" id="UaG-qs-UFb" userLabel="Scratch Image View" customClass="SRScratchView" customModule="SRScratchView">
                                                                         <rect key="frame" x="5" y="35" width="90" height="91"/>
@@ -146,7 +154,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kJv-Kc-aeN" userLabel="Card2 View">
-                                                        <rect key="frame" x="235" y="0.0" width="100" height="161"/>
+                                                        <rect key="frame" x="200" y="0.0" width="100" height="161"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T0f-Fc-mrz" userLabel="Front View">
                                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="161"/>
@@ -156,6 +164,14 @@
                                                                     </imageView>
                                                                     <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="happyChristmas" translatesAutoresizingMaskIntoConstraints="NO" id="ybz-sE-FVj" userLabel="WinImage">
                                                                         <rect key="frame" x="5" y="35" width="90" height="91"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                <real key="value" value="2"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
                                                                     </imageView>
                                                                     <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scratchSurface" translatesAutoresizingMaskIntoConstraints="NO" id="TgP-us-T2C" userLabel="Scratch Image View" customClass="SRScratchView" customModule="SRScratchView">
                                                                         <rect key="frame" x="5" y="35" width="90" height="91"/>
@@ -269,8 +285,8 @@
                                                     </view>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="135" translatesAutoresizingMaskIntoConstraints="NO" id="rtr-JZ-t4i">
-                                                <rect key="frame" x="0.0" y="402" width="335" height="161"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="rtr-JZ-t4i">
+                                                <rect key="frame" x="0.0" y="261" width="300" height="161"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OWB-ko-N3O" userLabel="Card3 View">
                                                         <rect key="frame" x="0.0" y="0.0" width="100" height="161"/>
@@ -283,6 +299,14 @@
                                                                     </imageView>
                                                                     <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="happyChristmas" translatesAutoresizingMaskIntoConstraints="NO" id="hNM-Jw-3Pt" userLabel="WinImage">
                                                                         <rect key="frame" x="5" y="35" width="90" height="91"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                <real key="value" value="2"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
                                                                     </imageView>
                                                                     <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scratchSurface" translatesAutoresizingMaskIntoConstraints="NO" id="Li3-cZ-3AW" userLabel="Scratch Image View" customClass="SRScratchView" customModule="SRScratchView">
                                                                         <rect key="frame" x="5" y="35" width="90" height="91"/>
@@ -395,7 +419,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o7v-5O-v69" userLabel="Card4 View">
-                                                        <rect key="frame" x="235" y="0.0" width="100" height="161"/>
+                                                        <rect key="frame" x="200" y="0.0" width="100" height="161"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B9g-jP-42W" userLabel="Front View">
                                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="161"/>
@@ -405,6 +429,14 @@
                                                                     </imageView>
                                                                     <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="happyChristmas" translatesAutoresizingMaskIntoConstraints="NO" id="Vxq-yI-bcM" userLabel="WinImage">
                                                                         <rect key="frame" x="5" y="35" width="90" height="91"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                <real key="value" value="2"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
                                                                     </imageView>
                                                                     <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scratchSurface" translatesAutoresizingMaskIntoConstraints="NO" id="QWF-za-r3H" userLabel="Scratch Image View" customClass="SRScratchView" customModule="SRScratchView">
                                                                         <rect key="frame" x="5" y="35" width="90" height="91"/>
@@ -521,20 +553,18 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="vAi-3I-JmL" secondAttribute="bottom" constant="20" id="M2Q-Qo-jlw"/>
-                                    <constraint firstItem="vAi-3I-JmL" firstAttribute="leading" secondItem="f7j-eT-toq" secondAttribute="leading" constant="20" id="eE8-Rn-RcX"/>
-                                    <constraint firstItem="vAi-3I-JmL" firstAttribute="top" secondItem="f7j-eT-toq" secondAttribute="top" constant="20" id="xSr-A9-Vp2"/>
-                                    <constraint firstAttribute="trailing" secondItem="vAi-3I-JmL" secondAttribute="trailing" constant="20" id="xzh-IQ-92z"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="f7j-eT-toq" secondAttribute="bottom" id="4kg-wr-W98"/>
+                            <constraint firstItem="jEA-97-o8l" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="AFg-5B-jk3"/>
+                            <constraint firstItem="jEA-97-o8l" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Kxu-4E-yfz"/>
+                            <constraint firstItem="jEA-97-o8l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RyN-Yb-GFE"/>
                             <constraint firstItem="f7j-eT-toq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="64" id="b4b-bV-W8f"/>
                             <constraint firstItem="f7j-eT-toq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dMy-Xy-Gkn"/>
                             <constraint firstItem="f7j-eT-toq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="eOJ-3F-TlA"/>
+                            <constraint firstItem="jEA-97-o8l" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="lYA-Vs-Tv3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -547,11 +577,26 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black"/>
                     <connections>
-                        <outlet property="backView1" destination="Yz3-Px-bQq" id="dSG-wF-vhd"/>
-                        <outlet property="cardView1" destination="kJv-Kc-aeN" id="ZOL-6q-7QB"/>
-                        <outlet property="frontView1" destination="T0f-Fc-mrz" id="Sbj-W4-GsW"/>
-                        <outlet property="scratchImage1" destination="TgP-us-T2C" id="2Ta-Ws-L7R"/>
-                        <outlet property="winImage1" destination="ybz-sE-FVj" id="UFU-Rq-XgH"/>
+                        <outlet property="backView1" destination="Wod-BV-qP7" id="3Gj-IN-ZoL"/>
+                        <outlet property="backView2" destination="Yz3-Px-bQq" id="dSG-wF-vhd"/>
+                        <outlet property="backView3" destination="uV7-P7-tgh" id="tzv-Uh-X14"/>
+                        <outlet property="backView4" destination="pGX-P2-zCe" id="6Kl-lO-rLl"/>
+                        <outlet property="cardView1" destination="1oA-yS-aju" id="mNs-sf-VXh"/>
+                        <outlet property="cardView2" destination="kJv-Kc-aeN" id="ZOL-6q-7QB"/>
+                        <outlet property="cardView3" destination="OWB-ko-N3O" id="ZDp-N8-uSL"/>
+                        <outlet property="cardView4" destination="o7v-5O-v69" id="IaN-2I-wQ8"/>
+                        <outlet property="frontView1" destination="a6d-Fw-Nqg" id="Nwp-pc-gwl"/>
+                        <outlet property="frontView2" destination="T0f-Fc-mrz" id="Sbj-W4-GsW"/>
+                        <outlet property="frontView3" destination="Xkh-l9-nZR" id="QOu-Ex-gHT"/>
+                        <outlet property="frontView4" destination="B9g-jP-42W" id="uRm-Dp-XYj"/>
+                        <outlet property="scratchImage1" destination="UaG-qs-UFb" id="vzg-9z-Puh"/>
+                        <outlet property="scratchImage2" destination="TgP-us-T2C" id="2Ta-Ws-L7R"/>
+                        <outlet property="scratchImage3" destination="Li3-cZ-3AW" id="qVc-Xu-k3c"/>
+                        <outlet property="scratchImage4" destination="QWF-za-r3H" id="iIS-Vz-DC4"/>
+                        <outlet property="winImage1" destination="eQa-Lg-JKx" id="6lX-Ar-ONK"/>
+                        <outlet property="winImage2" destination="ybz-sE-FVj" id="UFU-Rq-XgH"/>
+                        <outlet property="winImage3" destination="hNM-Jw-3Pt" id="KpI-Up-LBt"/>
+                        <outlet property="winImage4" destination="Vxq-yI-bcM" id="o4B-Vn-KFN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
