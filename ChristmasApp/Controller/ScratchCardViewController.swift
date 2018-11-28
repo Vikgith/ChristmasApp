@@ -15,21 +15,26 @@ class ViewController: UIViewController,SRScratchViewDelegate{
     private var isFlipped: Bool = false
     
     //MARK: OUTLETS ///////////////////////////////////////////////////////
-    @IBOutlet weak var winImage: UIImageView! //Not necesary
-    @IBOutlet weak var scratchImage: SRScratchView! //Not necesary
+    //VIEW 1
+    @IBOutlet weak var winImage1: UIImageView!
+    @IBOutlet weak var scratchImage1: SRScratchView!
+    @IBOutlet weak var cardView1: UIView! 
+    @IBOutlet weak var frontView1: UIView!
+    @IBOutlet weak var backView1: UIView!
+    //VIEW 2
     
-    @IBOutlet weak var cardView: UIView! 
-    @IBOutlet weak var frontView: UIView!
-    @IBOutlet weak var backView: UIView!
+    //VIEW 3
+    
+    //VIEW 4
     
     
     @IBAction func clickCardButton(_ sender: UIButton) {
         if sender.tag==1 {
             print("1 pressed")
             
-//            UIView.animate(withDuration:0.6, animations: { self.cardView.transform = CGAffineTransform(scaleX:3,y:3) })
-//
-//            flipCard(view1: backView, view2: frontView)
+            UIView.animate(withDuration:0.6, animations: { self.cardView1.transform = CGAffineTransform(scaleX:3,y:3) })
+
+            flipCard(view1: backView1, view2: frontView1)
         } else if sender.tag==2 {
             print("2 pressed")
         } else if sender.tag==3 {
@@ -45,7 +50,8 @@ class ViewController: UIViewController,SRScratchViewDelegate{
     override func viewDidLoad() { super.viewDidLoad()
         
         setLayers()
-        scratchImage.lineWidth = 20
+        self.scratchImage1.delegate = self
+        scratchImage1.lineWidth = 20
         
     }
     
@@ -58,8 +64,8 @@ class ViewController: UIViewController,SRScratchViewDelegate{
         
         if eraseProgress > 50.0{
             UIView.animate(withDuration: 0.5, animations: {
-                self.scratchImage.alpha = 0.0
-                self.cardView.boing()
+                self.scratchImage1.alpha = 0.0
+                self.cardView1.boing()
                 self.createParticles()
             })
         }
@@ -84,15 +90,13 @@ class ViewController: UIViewController,SRScratchViewDelegate{
     func setLayers(){
         //width of srcatch line
         
-        //Set delegate to the sratchController
-        self.scratchImage.delegate = self
-        //Make scratch surface a circle
-        self.scratchImage.layer.cornerRadius = self.scratchImage.frame.height/2
-        self.scratchImage.layer.masksToBounds = true
-        self.winImage.layer.cornerRadius = self.scratchImage.frame.height/2
-        self.winImage.layer.masksToBounds = true
-        self.frontView.cornerRadius = 10
-        self.frontView.layer.masksToBounds = true
+        
+        self.scratchImage1.layer.cornerRadius = self.scratchImage1.frame.height/2
+        self.scratchImage1.layer.masksToBounds = true
+        self.winImage1.layer.cornerRadius = self.scratchImage1.frame.height/2
+        self.winImage1.layer.masksToBounds = true
+        self.frontView1.cornerRadius = 10
+        self.frontView1.layer.masksToBounds = true
     }
     
 }

@@ -18,18 +18,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f7j-eT-toq" userLabel="GeneralView">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="jEA-97-o8l" userLabel="Background">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f7j-eT-toq" userLabel="GeneralView">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="jEA-97-o8l" userLabel="Background">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                    </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="vAi-3I-JmL">
-                                        <rect key="frame" x="25" y="82" width="220" height="350"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <stackView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="vAi-3I-JmL">
+                                        <rect key="frame" x="20" y="20" width="335" height="563"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Xbd-Tk-ljq">
-                                                <rect key="frame" x="0.0" y="0.0" width="220" height="161"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="135" translatesAutoresizingMaskIntoConstraints="NO" id="Xbd-Tk-ljq">
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="161"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1oA-yS-aju" userLabel="Card View">
                                                         <rect key="frame" x="0.0" y="0.0" width="100" height="161"/>
@@ -146,7 +146,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kJv-Kc-aeN" userLabel="Card2 View">
-                                                        <rect key="frame" x="120" y="0.0" width="100" height="161"/>
+                                                        <rect key="frame" x="235" y="0.0" width="100" height="161"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T0f-Fc-mrz" userLabel="Front View">
                                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="161"/>
@@ -269,8 +269,8 @@
                                                     </view>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rtr-JZ-t4i">
-                                                <rect key="frame" x="0.0" y="189" width="220" height="161"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="135" translatesAutoresizingMaskIntoConstraints="NO" id="rtr-JZ-t4i">
+                                                <rect key="frame" x="0.0" y="402" width="335" height="161"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OWB-ko-N3O" userLabel="Card3 View">
                                                         <rect key="frame" x="0.0" y="0.0" width="100" height="161"/>
@@ -395,7 +395,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o7v-5O-v69" userLabel="Card4 View">
-                                                        <rect key="frame" x="120" y="0.0" width="100" height="161"/>
+                                                        <rect key="frame" x="235" y="0.0" width="100" height="161"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B9g-jP-42W" userLabel="Front View">
                                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="161"/>
@@ -522,17 +522,17 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="jEA-97-o8l" firstAttribute="leading" secondItem="f7j-eT-toq" secondAttribute="leading" id="ERX-x7-x2K"/>
-                                    <constraint firstAttribute="trailing" secondItem="jEA-97-o8l" secondAttribute="trailing" id="PGY-hv-HKq"/>
-                                    <constraint firstAttribute="bottom" secondItem="jEA-97-o8l" secondAttribute="bottom" id="cmf-I2-7Vo"/>
-                                    <constraint firstItem="jEA-97-o8l" firstAttribute="top" secondItem="f7j-eT-toq" secondAttribute="top" id="tRK-99-sI5"/>
+                                    <constraint firstAttribute="bottom" secondItem="vAi-3I-JmL" secondAttribute="bottom" constant="20" id="M2Q-Qo-jlw"/>
+                                    <constraint firstItem="vAi-3I-JmL" firstAttribute="leading" secondItem="f7j-eT-toq" secondAttribute="leading" constant="20" id="eE8-Rn-RcX"/>
+                                    <constraint firstItem="vAi-3I-JmL" firstAttribute="top" secondItem="f7j-eT-toq" secondAttribute="top" constant="20" id="xSr-A9-Vp2"/>
+                                    <constraint firstAttribute="trailing" secondItem="vAi-3I-JmL" secondAttribute="trailing" constant="20" id="xzh-IQ-92z"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="f7j-eT-toq" secondAttribute="bottom" id="4kg-wr-W98"/>
-                            <constraint firstItem="f7j-eT-toq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="b4b-bV-W8f"/>
+                            <constraint firstItem="f7j-eT-toq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="64" id="b4b-bV-W8f"/>
                             <constraint firstItem="f7j-eT-toq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dMy-Xy-Gkn"/>
                             <constraint firstItem="f7j-eT-toq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="eOJ-3F-TlA"/>
                         </constraints>
@@ -545,17 +545,18 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black"/>
                     <connections>
-                        <outlet property="backView" destination="Yz3-Px-bQq" id="dSG-wF-vhd"/>
-                        <outlet property="cardView" destination="kJv-Kc-aeN" id="ZOL-6q-7QB"/>
-                        <outlet property="frontView" destination="T0f-Fc-mrz" id="Sbj-W4-GsW"/>
-                        <outlet property="scratchImage" destination="TgP-us-T2C" id="2Ta-Ws-L7R"/>
-                        <outlet property="winImage" destination="ybz-sE-FVj" id="UFU-Rq-XgH"/>
+                        <outlet property="backView1" destination="Yz3-Px-bQq" id="dSG-wF-vhd"/>
+                        <outlet property="cardView1" destination="kJv-Kc-aeN" id="ZOL-6q-7QB"/>
+                        <outlet property="frontView1" destination="T0f-Fc-mrz" id="Sbj-W4-GsW"/>
+                        <outlet property="scratchImage1" destination="TgP-us-T2C" id="2Ta-Ws-L7R"/>
+                        <outlet property="winImage1" destination="ybz-sE-FVj" id="UFU-Rq-XgH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2398" y="131"/>
+            <point key="canvasLocation" x="2397.5999999999999" y="130.88455772113943"/>
         </scene>
         <!--~CARD REWARDS~-->
         <scene sceneID="Ty8-Bw-H3Y">
