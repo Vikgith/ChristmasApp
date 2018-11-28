@@ -33,36 +33,12 @@
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="front" translatesAutoresizingMaskIntoConstraints="NO" id="A5d-ZP-5Xg" userLabel="Front background">
                                                         <rect key="frame" x="0.0" y="0.0" width="340" height="551"/>
                                                     </imageView>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nFX-rA-Hkf" userLabel="Scratch Surface View">
-                                                        <rect key="frame" x="10" y="115.5" width="320" height="320"/>
-                                                        <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="happyChristmas" translatesAutoresizingMaskIntoConstraints="NO" id="eQa-Lg-JKx" userLabel="WinImage">
-                                                                <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
-                                                            </imageView>
-                                                        </subviews>
-                                                        <constraints>
-                                                            <constraint firstAttribute="bottom" secondItem="eQa-Lg-JKx" secondAttribute="bottom" id="7WG-Ny-r8M"/>
-                                                            <constraint firstAttribute="height" constant="320" id="L90-pJ-1gE"/>
-                                                            <constraint firstAttribute="width" constant="320" id="Vjc-jC-8Ax"/>
-                                                            <constraint firstAttribute="trailing" secondItem="eQa-Lg-JKx" secondAttribute="trailing" id="dyz-AS-3nu"/>
-                                                            <constraint firstItem="eQa-Lg-JKx" firstAttribute="leading" secondItem="nFX-rA-Hkf" secondAttribute="leading" id="hhd-w3-ngw"/>
-                                                            <constraint firstItem="eQa-Lg-JKx" firstAttribute="top" secondItem="nFX-rA-Hkf" secondAttribute="top" id="j1a-C2-39P"/>
-                                                        </constraints>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                <real key="value" value="4"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </view>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="happyChristmas" translatesAutoresizingMaskIntoConstraints="NO" id="eQa-Lg-JKx" userLabel="WinImage">
+                                                        <rect key="frame" x="9.5" y="115" width="320" height="320"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scratchSurface" translatesAutoresizingMaskIntoConstraints="NO" id="UaG-qs-UFb" userLabel="Scratch Image View" customClass="SRScratchView" customModule="SRScratchView">
                                                         <rect key="frame" x="10" y="115.5" width="320" height="320"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="320" id="g0P-87-Yg2"/>
-                                                            <constraint firstAttribute="width" constant="320" id="hVP-f0-Ifm"/>
-                                                        </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                                 <color key="value" red="0.80784026019999999" green="0.77888295860000001" blue="0.54172346019999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -86,12 +62,12 @@
                                                     </imageView>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="nFX-rA-Hkf" firstAttribute="centerY" secondItem="a6d-Fw-Nqg" secondAttribute="centerY" id="29S-sr-r4b"/>
+                                                    <constraint firstItem="UaG-qs-UFb" firstAttribute="top" secondItem="a6d-Fw-Nqg" secondAttribute="top" constant="115.5" id="3SW-T9-gwv"/>
+                                                    <constraint firstAttribute="trailing" secondItem="UaG-qs-UFb" secondAttribute="trailing" constant="10" id="8HS-2t-U43"/>
+                                                    <constraint firstAttribute="bottom" secondItem="UaG-qs-UFb" secondAttribute="bottom" constant="115.5" id="Bmu-Y8-Nov"/>
                                                     <constraint firstItem="A5d-ZP-5Xg" firstAttribute="leading" secondItem="a6d-Fw-Nqg" secondAttribute="leading" id="EJ1-aS-fka"/>
                                                     <constraint firstAttribute="bottom" secondItem="A5d-ZP-5Xg" secondAttribute="bottom" id="OKw-p2-ygF"/>
-                                                    <constraint firstItem="UaG-qs-UFb" firstAttribute="centerX" secondItem="a6d-Fw-Nqg" secondAttribute="centerX" id="QPy-rB-WpH"/>
-                                                    <constraint firstItem="UaG-qs-UFb" firstAttribute="centerY" secondItem="a6d-Fw-Nqg" secondAttribute="centerY" id="h4p-Ef-Jnp"/>
-                                                    <constraint firstItem="nFX-rA-Hkf" firstAttribute="centerX" secondItem="a6d-Fw-Nqg" secondAttribute="centerX" id="s1Z-DT-NzL"/>
+                                                    <constraint firstItem="UaG-qs-UFb" firstAttribute="leading" secondItem="a6d-Fw-Nqg" secondAttribute="leading" constant="10" id="rms-Ul-nJE"/>
                                                     <constraint firstItem="A5d-ZP-5Xg" firstAttribute="top" secondItem="a6d-Fw-Nqg" secondAttribute="top" id="sbq-d1-qkI"/>
                                                     <constraint firstAttribute="trailing" secondItem="A5d-ZP-5Xg" secondAttribute="trailing" id="uni-XW-geQ"/>
                                                 </constraints>
@@ -180,11 +156,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="backCardView" destination="1oA-yS-aju" id="8ZA-ax-f11"/>
-                        <outlet property="backView" destination="Wod-BV-qP7" id="ccq-OL-Hno"/>
+                        <outlet property="backView" destination="Wod-BV-qP7" id="6Dl-W6-cDW"/>
                         <outlet property="cardView" destination="a6d-Fw-Nqg" id="jwK-U6-THT"/>
-                        <outlet property="scratchCardView" destination="nFX-rA-Hkf" id="wkC-U7-c4H"/>
+                        <outlet property="frontView" destination="a6d-Fw-Nqg" id="qj8-ru-XsN"/>
                         <outlet property="scratchImageView" destination="UaG-qs-UFb" id="R1X-lY-c8a"/>
+                        <outlet property="winImage" destination="eQa-Lg-JKx" id="eAr-cw-D42"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
