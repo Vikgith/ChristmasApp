@@ -589,6 +589,7 @@
                         <outlet property="frontView2" destination="T0f-Fc-mrz" id="Sbj-W4-GsW"/>
                         <outlet property="frontView3" destination="Xkh-l9-nZR" id="QOu-Ex-gHT"/>
                         <outlet property="frontView4" destination="B9g-jP-42W" id="uRm-Dp-XYj"/>
+                        <outlet property="generalView" destination="f7j-eT-toq" id="f6c-Gx-XGK"/>
                         <outlet property="scratchImage1" destination="UaG-qs-UFb" id="vzg-9z-Puh"/>
                         <outlet property="scratchImage2" destination="TgP-us-T2C" id="2Ta-Ws-L7R"/>
                         <outlet property="scratchImage3" destination="Li3-cZ-3AW" id="qVc-Xu-k3c"/>

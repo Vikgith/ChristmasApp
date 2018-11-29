@@ -14,12 +14,16 @@ class ViewController: UIViewController,SRScratchViewDelegate{
     //MARK: VARIABLES AND LET
     private var isFlipped: Bool = false
     var num = 0
+    var animator: UIViewPropertyAnimator!
     
     //MARK: OUTLETS ///////////////////////////////////////////////////////
+    
+    @IBOutlet weak var generalView: UIView!
     //VIEW 1
     @IBOutlet weak var cardView1: UIView!
     @IBOutlet weak var frontView1: UIView!
     @IBOutlet weak var backView1: UIView!
+    
     
     @IBOutlet weak var winImage1: UIImageView!
     @IBOutlet weak var scratchImage1: SRScratchView!
@@ -52,12 +56,20 @@ class ViewController: UIViewController,SRScratchViewDelegate{
     @IBAction func clickCardButton(_ sender: UIButton) {
         
         isFlipped = false
-        
+ //            UIView.animate(withDuration:0.6, animations: { self.cardView2.transform = CGAffineTransform(scaleX:3,y:3) })
         if sender.tag==1 {
+            
             num = 1
-//            UIView.animate(withDuration:0.6, animations: { self.cardView2.transform = CGAffineTransform(scaleX:3,y:3) })
-
-            flipCard(view1: backView1, view2: frontView1)
+            animator = UIViewPropertyAnimator(duration: 2, curve: .linear) {/* [unowned self, generalView] in*/
+                self.cardView1!.center.x = self.generalView.center.x
+                self.cardView1!.center.y = self.generalView.center.y
+                
+//                cardView1!.center.x = 187.5
+//                cardView1!.center.y = 333.5
+//                cardView1!.transform = CGAffineTransform(rotationAngle: CGFloat.pi).scaledBy(x: 0.001, y: 0.001)
+            }
+            animator.startAnimation()
+            //flipCard(view1: backView1, view2: frontView1)
         } else if sender.tag==2 {
             num=2
             flipCard(view1: backView2, view2: frontView2)
@@ -72,6 +84,8 @@ class ViewController: UIViewController,SRScratchViewDelegate{
     
     //MARK: VIEW DID LOAD //////////////////////////////////////////////////
     override func viewDidLoad() { super.viewDidLoad()
+        
+        cardView1.translatesAutoresizingMaskIntoConstraints = false
         
         setLayers()
         self.scratchImage1.delegate = self
