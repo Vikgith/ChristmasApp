@@ -13,7 +13,7 @@ class ViewController: UIViewController,SRScratchViewDelegate{
  
     //MARK: VARIABLES AND LET
     private var isFlipped: Bool = false
-    var isZoom:Bool = false
+    
     var num = 0
     var animator1: UIViewPropertyAnimator!
     var animator2: UIViewPropertyAnimator!
@@ -60,77 +60,59 @@ class ViewController: UIViewController,SRScratchViewDelegate{
     //BUTTON
     @IBAction func clickCardButton(_ sender: UIButton) {
         
+        
+        
         isFlipped = false
  //            UIView.animate(withDuration:0.6, animations: { self.cardView2.transform = CGAffineTransform(scaleX:3,y:3) })
         if sender.tag==1 {
-            
             num = 1
-            
-            if isZoom == false {
-                animator1.startAnimation()
-                UIView.animate(withDuration:1, animations: {
-                    self.cardView2.alpha=0
-                    self.cardView3.alpha=0
-                    self.cardView4.alpha=0
-                })
-            }else if isZoom == true{
-                flipCard(view1: backView1, view2: frontView1)
+            animator1.startAnimation()
+            UIView.animate(withDuration:1, animations: {
+                self.cardView4.alpha=0
+                self.cardView2.alpha=0
+                self.cardView3.alpha=0
+            })
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
+                self.flipCard(view1: self.backView1, view2: self.frontView1)
             }
-            
-            isZoom = true
             
             
         } else if sender.tag==2 {
-            
             num=2
-            
-            if isZoom == false {
-                animator2.startAnimation()
-                UIView.animate(withDuration:1, animations: {
-                    self.cardView1.alpha=0
-                    self.cardView3.alpha=0
-                    self.cardView4.alpha=0
-                })
-            }else if isZoom == true{
-                flipCard(view1: backView2, view2: frontView2)
+            animator2.startAnimation()
+            UIView.animate(withDuration:1, animations: {
+                self.cardView1.alpha=0
+                self.cardView3.alpha=0
+                self.cardView4.alpha=0
+            })
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
+                self.flipCard(view1: self.backView2, view2: self.frontView2)
             }
             
-            isZoom = true
             
         } else if sender.tag==3 {
-            
             num=3
-            
-            if isZoom == false {
-                animator3.startAnimation()
-                UIView.animate(withDuration:1, animations: {
-                    self.cardView2.alpha=0
-                    self.cardView1.alpha=0
-                    self.cardView4.alpha=0
-                })
-            }else if isZoom == true{
-                flipCard(view1: backView3, view2: frontView3)
+            animator3.startAnimation()
+            UIView.animate(withDuration:1, animations: {
+                self.cardView1.alpha=0
+                self.cardView2.alpha=0
+                self.cardView4.alpha=0
+            })
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
+                self.flipCard(view1: self.backView3, view2: self.frontView3)
             }
-            
-            isZoom = true
             
         } else if sender.tag==4 {
-            
             num=4
-            
-            if isZoom == false {
-                animator4.startAnimation()
-                UIView.animate(withDuration:1, animations: {
-                    self.cardView2.alpha=0
-                    self.cardView3.alpha=0
-                    self.cardView1.alpha=0
-                })
-            }else if isZoom == true{
-                flipCard(view1: backView4, view2: frontView4)
+            animator4.startAnimation()
+            UIView.animate(withDuration:1, animations: {
+                self.cardView1.alpha=0
+                self.cardView3.alpha=0
+                self.cardView2.alpha=0
+            })
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
+                self.flipCard(view1: self.backView4, view2: self.frontView4)
             }
-            
-            isZoom = true
-            
         }
         
         
@@ -142,7 +124,7 @@ class ViewController: UIViewController,SRScratchViewDelegate{
         setLayers()
         setAnimations()
         setDelegatesAndLineWidth()
-    
+        setBeatView()
         
     }
     
@@ -154,23 +136,26 @@ class ViewController: UIViewController,SRScratchViewDelegate{
         print(eraseProgress)
         
         if eraseProgress > 40{
+            
             UIView.animate(withDuration: 0.5, animations: {
+                self.createParticles()
+                
                 if self.num == 1{
                     self.scratchImage1.alpha = 0.0
                     //self.cardView1.boing()
-                    self.createParticles()
+                    
                 }else if self.num == 2{
                     self.scratchImage2.alpha = 0.0
                     //self.cardView2.boing()
-                    self.createParticles()
+                    
                 }else if self.num == 3{
                     self.scratchImage3.alpha = 0.0
                     //self.cardView3.boing()
-                    self.createParticles()
+                    
                 }else if self.num == 4{
                     self.scratchImage4.alpha = 0.0
                     //self.cardView4.boing()
-                    self.createParticles()
+                    
                 }
                 
             })
@@ -300,6 +285,20 @@ class ViewController: UIViewController,SRScratchViewDelegate{
         scratchImage2.lineWidth = 10
         scratchImage3.lineWidth = 10
         scratchImage4.lineWidth = 10
+    }
+    
+    func setBeatView(){
+        generalView.isUserInteractionEnabled=false
+        
+        cardView1.beat()
+        cardView2.beat()
+        cardView3.beat()
+        cardView4.beat()
+        
+        //Run the code inside after a delay
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.6) {
+            self.generalView.isUserInteractionEnabled=true
+        }
     }
     
     

@@ -49,18 +49,6 @@ extension UIView {
         layer.add(pulse, forKey: "pulse")
     }
     
-    func pulsate2() {
-        let pulse = CASpringAnimation(keyPath: "transform.scale")
-        pulse.duration = 0.5
-        pulse.fromValue = 3.5
-        pulse.toValue = 4
-        pulse.autoreverses = false
-        pulse.repeatCount = 0
-        pulse.initialVelocity = 10
-        pulse.damping = 0.05
-        layer.add(pulse, forKey: "pulse")
-    }
-    
     /** Make a flash in the view */
     func flash() {
         let flash = CABasicAnimation(keyPath: "opacity")
@@ -91,6 +79,19 @@ extension UIView {
         
         layer.add(shake, forKey: "position")
     }
+    
+    func beat() {
+        let pulse = CASpringAnimation(keyPath: "transform.scale")
+        pulse.duration = 0.4       // a.0.6    b.
+        pulse.fromValue = 0.98     // a.0.97   b.
+        pulse.toValue = 1.02       // a.1.03   b.
+        pulse.autoreverses = false // a.false  b.
+        pulse.repeatCount = 4
+        pulse.initialVelocity = 10 // a.10     b.
+        pulse.damping = 0.05       // a.0.05   b.
+        layer.add(pulse, forKey: "pulse")
+    }
+    
 }
 // MARK: modify views
 ////////////////////////////////////////////////////////////////////
