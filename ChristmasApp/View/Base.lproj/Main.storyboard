@@ -157,7 +157,7 @@
                     </view>
                     <connections>
                         <outlet property="backView" destination="Wod-BV-qP7" id="6Dl-W6-cDW"/>
-                        <outlet property="cardView" destination="a6d-Fw-Nqg" id="jwK-U6-THT"/>
+                        <outlet property="cardView" destination="1oA-yS-aju" id="hV7-fT-8U5"/>
                         <outlet property="frontView" destination="a6d-Fw-Nqg" id="qj8-ru-XsN"/>
                         <outlet property="scratchImageView" destination="UaG-qs-UFb" id="R1X-lY-c8a"/>
                         <outlet property="winImage" destination="eQa-Lg-JKx" id="eAr-cw-D42"/>
