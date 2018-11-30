@@ -13,6 +13,7 @@ class ViewController: UIViewController,SRScratchViewDelegate{
  
     //MARK: VARIABLES AND LET
     private var isFlipped: Bool = false
+    var isZoom:Bool = false
     var num = 0
     var animator1: UIViewPropertyAnimator!
     var animator2: UIViewPropertyAnimator!
@@ -64,47 +65,71 @@ class ViewController: UIViewController,SRScratchViewDelegate{
         if sender.tag==1 {
             
             num = 1
-            animator1.startAnimation()
-            //flipCard(view1: backView1, view2: frontView1)
-            UIView.animate(withDuration:1, animations: {
-                self.cardView2.alpha=0
-                self.cardView3.alpha=0
-                self.cardView4.alpha=0
-            })
+            
+            if isZoom == false {
+                animator1.startAnimation()
+                UIView.animate(withDuration:1, animations: {
+                    self.cardView2.alpha=0
+                    self.cardView3.alpha=0
+                    self.cardView4.alpha=0
+                })
+            }else if isZoom == true{
+                flipCard(view1: backView1, view2: frontView1)
+            }
+            
+            isZoom = true
             
             
         } else if sender.tag==2 {
             
             num=2
-            animator2.startAnimation()
-            //flipCard(view1: backView2, view2: frontView2)
-            UIView.animate(withDuration:1, animations: {
-                self.cardView1.alpha=0
-                self.cardView3.alpha=0
-                self.cardView4.alpha=0
-            })
+            
+            if isZoom == false {
+                animator2.startAnimation()
+                UIView.animate(withDuration:1, animations: {
+                    self.cardView1.alpha=0
+                    self.cardView3.alpha=0
+                    self.cardView4.alpha=0
+                })
+            }else if isZoom == true{
+                flipCard(view1: backView2, view2: frontView2)
+            }
+            
+            isZoom = true
             
         } else if sender.tag==3 {
             
             num=3
-            animator3.startAnimation()
-            //flipCard(view1: backView3, view2: frontView3)
-            UIView.animate(withDuration:1, animations: {
-                self.cardView2.alpha=0
-                self.cardView1.alpha=0
-                self.cardView4.alpha=0
-            })
+            
+            if isZoom == false {
+                animator3.startAnimation()
+                UIView.animate(withDuration:1, animations: {
+                    self.cardView2.alpha=0
+                    self.cardView1.alpha=0
+                    self.cardView4.alpha=0
+                })
+            }else if isZoom == true{
+                flipCard(view1: backView3, view2: frontView3)
+            }
+            
+            isZoom = true
             
         } else if sender.tag==4 {
             
             num=4
-            animator4.startAnimation()
-            //flipCard(view1: backView4, view2: frontView4)
-            UIView.animate(withDuration:1, animations: {
-                self.cardView2.alpha=0
-                self.cardView3.alpha=0
-                self.cardView1.alpha=0
-            })
+            
+            if isZoom == false {
+                animator4.startAnimation()
+                UIView.animate(withDuration:1, animations: {
+                    self.cardView2.alpha=0
+                    self.cardView3.alpha=0
+                    self.cardView1.alpha=0
+                })
+            }else if isZoom == true{
+                flipCard(view1: backView4, view2: frontView4)
+            }
+            
+            isZoom = true
             
         }
         
@@ -162,7 +187,7 @@ class ViewController: UIViewController,SRScratchViewDelegate{
         
         UIView.transition(from: cardToFlip!,
                           to: bottomCard!,
-                          duration: 2,
+                          duration: 1,
                           options: [.transitionFlipFromLeft, .showHideTransitionViews,
                                     .preferredFramesPerSecond60, .curveEaseInOut ],
                           completion: nil)
