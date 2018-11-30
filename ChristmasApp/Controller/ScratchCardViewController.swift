@@ -61,7 +61,7 @@ class ViewController: UIViewController,SRScratchViewDelegate{
     @IBAction func clickCardButton(_ sender: UIButton) {
         
         
-        
+        sender.isEnabled=false
         isFlipped = false
  //            UIView.animate(withDuration:0.6, animations: { self.cardView2.transform = CGAffineTransform(scaleX:3,y:3) })
         if sender.tag==1 {
@@ -296,7 +296,7 @@ class ViewController: UIViewController,SRScratchViewDelegate{
         cardView4.beat()
         
         //Run the code inside after a delay
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.6) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
             self.generalView.isUserInteractionEnabled=true
         }
     }

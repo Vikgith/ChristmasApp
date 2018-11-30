@@ -86,7 +86,7 @@ extension UIView {
         pulse.fromValue = 0.98     // a.0.97   b.
         pulse.toValue = 1.02       // a.1.03   b.
         pulse.autoreverses = false // a.false  b.
-        pulse.repeatCount = 4
+        pulse.repeatCount = 3
         pulse.initialVelocity = 10 // a.10     b.
         pulse.damping = 0.05       // a.0.05   b.
         layer.add(pulse, forKey: "pulse")
@@ -218,4 +218,12 @@ extension UIView {
         layer.add(pulse, forKey: "pulse")
     }
     
+}
+
+extension Date {
+    /** Use an expression like Date().localString(), or if you want to only print the time, you can use Date().localString(dateStyle:.none)
+    */
+    func localString(dateStyle: DateFormatter.Style = .medium, timeStyle: DateFormatter.Style = .medium) -> String {
+        return DateFormatter.localizedString(from: self, dateStyle: dateStyle, timeStyle: timeStyle)
+    }
 }
