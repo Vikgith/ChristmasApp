@@ -49,6 +49,18 @@ extension UIView {
         layer.add(pulse, forKey: "pulse")
     }
     
+    func pulsate2() {
+        let pulse = CASpringAnimation(keyPath: "transform.scale")
+        pulse.duration = 0.5
+        pulse.fromValue = 3.5
+        pulse.toValue = 4
+        pulse.autoreverses = false
+        pulse.repeatCount = 0
+        pulse.initialVelocity = 10
+        pulse.damping = 0.05
+        layer.add(pulse, forKey: "pulse")
+    }
+    
     /** Make a flash in the view */
     func flash() {
         let flash = CABasicAnimation(keyPath: "opacity")

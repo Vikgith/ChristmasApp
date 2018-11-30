@@ -235,6 +235,13 @@ class ViewController: UIViewController,SRScratchViewDelegate{
             
             self.cardView1.transform = CGAffineTransform(rotationAngle: CGFloat.pi).scaledBy(x: 3.5, y: 3.5)
             self.cardView1.transform = CGAffineTransform(rotationAngle: CGFloat.pi*2).scaledBy(x: 3.5, y: 3.5)
+            /////////
+            self.cardView2.center.y = self.view.frame.height
+            self.cardView2.transform = CGAffineTransform(rotationAngle: CGFloat.pi).scaledBy(x: 0.001, y: 0.001)
+            self.cardView3.center.y = self.view.frame.height
+            self.cardView3.transform = CGAffineTransform(rotationAngle: CGFloat.pi).scaledBy(x: 0.001, y: 0.001)
+            self.cardView4.center.y = self.view.frame.height
+            self.cardView4.transform = CGAffineTransform(rotationAngle: CGFloat.pi).scaledBy(x: 0.001, y: 0.001)
         }
         
         animator2 = UIViewPropertyAnimator(duration: 1.5, curve: .easeInOut) {
@@ -243,6 +250,13 @@ class ViewController: UIViewController,SRScratchViewDelegate{
             
             self.cardView2.transform = CGAffineTransform(rotationAngle: CGFloat.pi).scaledBy(x: 3.5, y: 3.5)
             self.cardView2.transform = CGAffineTransform(rotationAngle: CGFloat.pi*2).scaledBy(x: 3.5, y: 3.5)
+            /////////
+            self.cardView1.center.y = self.view.frame.height
+            self.cardView1.transform = CGAffineTransform(rotationAngle: CGFloat.pi).scaledBy(x: 0.001, y: 0.001)
+            self.cardView3.center.y = self.view.frame.height
+            self.cardView3.transform = CGAffineTransform(rotationAngle: CGFloat.pi).scaledBy(x: 0.001, y: 0.001)
+            self.cardView4.center.y = self.view.frame.height
+            self.cardView4.transform = CGAffineTransform(rotationAngle: CGFloat.pi).scaledBy(x: 0.001, y: 0.001)
         }
         
         animator3 = UIViewPropertyAnimator(duration: 1.5, curve: .easeInOut) {
@@ -251,6 +265,13 @@ class ViewController: UIViewController,SRScratchViewDelegate{
             
             self.cardView3.transform = CGAffineTransform(rotationAngle: CGFloat.pi).scaledBy(x: 3.5, y: 3.5)
             self.cardView3.transform = CGAffineTransform(rotationAngle: CGFloat.pi*2).scaledBy(x: 3.5, y: 3.5)
+            /////////
+            self.cardView2.center.y = self.view.frame.height
+            self.cardView2.transform = CGAffineTransform(rotationAngle: CGFloat.pi).scaledBy(x: 0.001, y: 0.001)
+            self.cardView1.center.y = self.view.frame.height
+            self.cardView1.transform = CGAffineTransform(rotationAngle: CGFloat.pi).scaledBy(x: 0.001, y: 0.001)
+            self.cardView4.center.y = self.view.frame.height
+            self.cardView4.transform = CGAffineTransform(rotationAngle: CGFloat.pi).scaledBy(x: 0.001, y: 0.001)
         }
         
         animator4 = UIViewPropertyAnimator(duration: 1.5, curve: .easeInOut) {
@@ -259,6 +280,13 @@ class ViewController: UIViewController,SRScratchViewDelegate{
             
             self.cardView4.transform = CGAffineTransform(rotationAngle: CGFloat.pi).scaledBy(x: 3.5, y: 3.5)
             self.cardView4.transform = CGAffineTransform(rotationAngle: CGFloat.pi*2).scaledBy(x: 3.5, y: 3.5)
+            /////////
+            self.cardView2.center.y = self.view.frame.height
+            self.cardView2.transform = CGAffineTransform(rotationAngle: CGFloat.pi).scaledBy(x: 0.001, y: 0.001)
+            self.cardView3.center.y = self.view.frame.height
+            self.cardView3.transform = CGAffineTransform(rotationAngle: CGFloat.pi).scaledBy(x: 0.001, y: 0.001)
+            self.cardView1.center.y = self.view.frame.height
+            self.cardView1.transform = CGAffineTransform(rotationAngle: CGFloat.pi).scaledBy(x: 0.001, y: 0.001)
         }
     }
     
